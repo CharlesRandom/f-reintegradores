@@ -15,10 +15,10 @@ const LoginForm = ({login, handleText}) => {
         </FormItem>
         <FormItem>
           <div className="d-flex jcc aic">
-            <Button type="primary" htmlType="submit">Log in</Button>
+            <Button type="primary" htmlType="submit">Login</Button>
           </div>
         </FormItem>
-        <div className="d-flex jcc aic"><p>Or <a href="/signup">register now!</a></p></div>
+        <div className="d-flex jcc aic"><p>O <a href="/signup">regístrate ahora!</a></p></div>
       </Form>
     </div>
   )

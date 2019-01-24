@@ -9,7 +9,9 @@ import {uploadFile} from '../../services/users'
 class AuthPage extends Component {
   state={
     user:{},
-    current:{},
+    current:{
+      donationOrigin:false
+    },
     loading:false
   }
   

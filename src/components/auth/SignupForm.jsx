@@ -17,13 +17,13 @@ const SignupForm = ({signup, handleText, onChange, current}) => {
             </RadioGroup>
           </FormItem>
           <FormItem>
-            {current.donationOrigin && current.donationOrigin === "Público" ? 
+            {current && current.donationOrigin && current.donationOrigin === "Público" ? 
             <RadioGroup name="donationType" onChange={handleText}>
               <Radio value="Gub">Cooperación Gubernamental</Radio><br/>
               <Radio value="Int">Cooperación Internacional</Radio><br/>
             </RadioGroup>
             :
-            current.donationOrigin &&
+            current && current.donationOrigin &&
             <RadioGroup name="donationType" onChange={handleText}>
               <Radio value="Fil">Filantropía</Radio><br/>
               <Radio value="IP">Iniciativa Privada</Radio><br/>
@@ -31,7 +31,7 @@ const SignupForm = ({signup, handleText, onChange, current}) => {
             }
           </FormItem>
           <FormItem>
-            {current.donationOrigin &&
+            {current && current.donationOrigin &&
             <RadioGroup name="person" onChange={handleText}>
               <Radio value="Física">Física</Radio><br/>
               <Radio value="Moral">Moral</Radio><br/>
@@ -48,10 +48,10 @@ const SignupForm = ({signup, handleText, onChange, current}) => {
             </Upload>
           </FormItem>
           <FormItem>
-            {current.person && current.person === "Física" ?
+            {current && current.person && current.person === "Física" ?
             <Input name="CURP" onChange={handleText} prefix={<Icon type="idcard" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="CURP" />
             :
-            current.person &&
+            current && current.person &&
             <Upload onChange={(info)=>onChange(info,"actaConstitutiva")}>
               <Button>
                 <Icon type="upload" /> Acta Constitutiva
