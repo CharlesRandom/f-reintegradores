@@ -5,9 +5,11 @@ import videoReintegradores from '../../images/video/WereTheSuperhumans-RioParaly
 const HomeVideo = ({ onClick }) => {
   return (
     <div>
-      <video src={videoReintegradores} controls onClick={onClick}>
-        Your browser does not support the video tag.
-      </video>
+      <div className="video-container">
+        <video className="center" src={videoReintegradores} controls onClick={onClick}>
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   )
 }

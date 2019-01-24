@@ -49,7 +49,7 @@ class AuthPage extends Component {
           getProfile(r._id)
           .then(r=>{
             localStorage.setItem('loggedUser',JSON.stringify(r))
-            this.props.history.push('/obj')
+            this.props.history.push('/objetivos')
           })
         }
         else {
@@ -58,7 +58,7 @@ class AuthPage extends Component {
         }
       }).catch(e=>{
         console.log(e)
-        this.authError('Something went wrong, please check credentials')
+        this.authError('Something went wrong, please check console')
       })
   }
 
@@ -67,7 +67,7 @@ class AuthPage extends Component {
     const field = e.target.name
     const value = e.target.value
     user[field] = value
-    console.log(user)
+    // console.log(user)
     this.setState({user})
   }
 
@@ -79,7 +79,7 @@ class AuthPage extends Component {
         info.file.status = "done"
         user[field] = link
         this.setState({user})
-        console.log(user)
+        // console.log(user)
       }).catch(e=>{
         console.log('Something went wrong D: try adding the image again')
         console.log(e)

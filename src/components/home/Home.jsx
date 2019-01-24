@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Home.css'
 import { Carousel } from 'antd';
 import HomeLanding from './HomeLanding'
 import HomeVideo from './HomeVideo'
@@ -18,7 +19,7 @@ export default class Home extends Component {
   render() {
     const {onClick} = this
     return (
-      <div>
+      <div className="home-carousel">
         <Carousel vertical autoplay>
           <HomeLanding />
           <HomeVideo onClick={onClick} />
