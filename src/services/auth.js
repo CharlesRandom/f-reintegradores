@@ -19,7 +19,12 @@ export const login = user => {
 
 //logout
 
-
+//email confirmation
+export const confirmation = token => {
+  return axios.post(host + token, {withCredentials:true})
+    .then(r=>r.data)
+    .catch(e=>e.response)
+}
 
 //profile
 export const getProfile = user => {
