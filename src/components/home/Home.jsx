@@ -6,6 +6,10 @@ import HomeVideo from './HomeVideo'
 import HomeObjetivos from './HomeObjetivos'
 
 export default class Home extends Component {
+  myRef = React.createRef()
+  state = {
+    scrollTop: 0
+  }
 
   onClick = e => {
     // toggles play / pause
@@ -15,6 +19,8 @@ export default class Home extends Component {
   onObjClick = e => {
     console.log(e.target)
   }
+
+  
 
   render() {
     const {onClick} = this
