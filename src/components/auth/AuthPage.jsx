@@ -93,7 +93,7 @@ class AuthPage extends Component {
     return (
       <div className="auth">
         <div className="auth-container">
-          <div>
+          {/* <div> */}
             {pathname==='/login'?
             <div>
               {!loading ? 
@@ -113,7 +113,7 @@ class AuthPage extends Component {
               </Spin>}
             </div>
             }
-          </div>          
+          {/* </div> */}
         </div>
       </div>
     )
