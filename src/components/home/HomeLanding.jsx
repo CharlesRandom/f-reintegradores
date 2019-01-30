@@ -1,6 +1,5 @@
 import React from 'react'
 import './Home.css'
-import isotipo from '../../images/Isotipo.png'
 import logotipo from '../../images/Logo-Curvas-Reintegradores.png'
 import plecaInferior from '../../images/PlecaInferior.png'
 import btnGoogle from '../../images/BotonG_Registro_41x41px.png'
@@ -14,8 +13,6 @@ const HomeLanding = () => {
     <div>
       <div className="home-landing">
         <img src={logotipo} alt="Reintegradores isotipo"/>
-        {/* <h1>REINTEGRADORES</h1> */}
-        {/* <h3>Inteligencia civil</h3> */}
       </div>
       <div className="footer">
         <img src={plecaInferior} alt="pleca inferior"/>
