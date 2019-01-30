@@ -27,7 +27,21 @@ code {
     url(./fonts/Brandon_reg.otf) format('opentype');
 }
 
-h1, h2, h3, h4, h5, p {
+@font-face {
+  font-family: 'Brandon Bold';
+  font-style: bold;
+  font-weight: bold;
+  src:
+    local('Brandon blk'),
+    local('Brandon-blk'),
+    url(./fonts/Brandon_blk.otf) format('opentype');
+}
+
+h1 {
+  font-family: 'Brandon Bold';
+}
+
+h2, h3, h4, h5, p {
   font-family: 'Brandon';
 }
 

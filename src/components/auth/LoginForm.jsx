@@ -8,10 +8,12 @@ const LoginForm = ({login, handleText}) => {
     <div className="login-form">
       <Form layout="vertical" method="POST" onSubmit={login}>
         <FormItem>
-        <Input name="email" onChange={handleText} prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Email" />
+        <Input name="email" onChange={handleText} prefix={<Icon type="mail" 
+          style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Email" />
         </FormItem>
         <FormItem>
-          <Input name="password" onChange={handleText} prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+          <Input name="password" onChange={handleText} prefix={<Icon type="lock" 
+            style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
         </FormItem>
         <FormItem>
           <div className="d-flex jcc aic">

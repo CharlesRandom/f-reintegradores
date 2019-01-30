@@ -11,7 +11,12 @@ const dateFormat = 'YYYY/MM/DD';
 const SignupForm = ({signup, handleText, onChange, current}) => {
   return (
     <div className="auth-form">
-      <h2>REGISTRO | Donatario</h2>
+      {/* <h2>REGISTRO | Donatario</h2> */}
+      <div style={{display:"flex",justifyContent:"center"}}>
+        <h2 style={{fontFamily:"Brandon Bold"}}>REGISTRO</h2>
+        <h2>&nbsp;|&nbsp;</h2>
+        <h2>Donatario</h2>
+      </div>
       <Form layout="vertical" method="POST" onSubmit={signup}>
         <div className="radio-files-container">
           <div className="radio-container">
@@ -54,7 +59,8 @@ const SignupForm = ({signup, handleText, onChange, current}) => {
             </FormItem>
             <FormItem>
               {current && current.person && current.person === "Física" ?
-              <Input name="CURP" onChange={handleText} prefix={<Icon type="idcard" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="CURP" />
+              <Input name="CURP" onChange={handleText} prefix={<Icon type="idcard" 
+                style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="CURP" />
               :
               current && current.person &&
               <Upload onChange={(info)=>onChange(info,"actaConstitutiva")}>
@@ -65,26 +71,32 @@ const SignupForm = ({signup, handleText, onChange, current}) => {
               }
             </FormItem>
             <FormItem>
-              <Input name="RFC" onChange={handleText} prefix={<Icon type="audit" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="RFC" />
+              <Input name="RFC" onChange={handleText} prefix={<Icon type="audit" 
+                style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="RFC" />
             </FormItem>
             <FormItem>
-              <Input name="address" onChange={handleText} prefix={<Icon type="car" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Domicilio" />
+              <Input name="address" onChange={handleText} prefix={<Icon type="car" 
+                style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Domicilio" />
             </FormItem>
           </div>
         </div>
         <div className="radio-files-container">
           <div className="user-container">
             <FormItem>
-              <Input name="name" onChange={handleText} prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Nombre" />
+              <Input name="name" onChange={handleText} prefix={<Icon type="user" 
+                style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Nombre" />
             </FormItem>
             <FormItem>
-              <Input name="lastname" onChange={handleText} prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Apellido" />
+              <Input name="lastname" onChange={handleText} prefix={<Icon type="user" 
+                style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Apellido" />
             </FormItem>
             <FormItem>
-              <Input name="email" onChange={handleText} prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Email" />
+              <Input name="email" onChange={handleText} prefix={<Icon type="mail" 
+                style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Email" />
             </FormItem>
             <FormItem>
-              <Input name="password" onChange={handleText} prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+              <Input name="password" onChange={handleText} prefix={<Icon type="lock" 
+                style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
             </FormItem>
           </div>
           <div className="info-container">
