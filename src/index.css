@@ -17,6 +17,20 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Brandon reg'),
+    local('Brandon-reg'),
+    url(./fonts/Brandon_reg.otf) format('opentype');
+}
+
+h1, h2, h3, h4, h5, p {
+  font-family: 'Brandon';
+}
+
 .d-flex {
   display: flex;
   width: 100%;
