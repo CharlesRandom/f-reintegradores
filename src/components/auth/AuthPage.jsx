@@ -5,6 +5,8 @@ import LoginForm from './LoginForm'
 import SignupForm from './SignupForm'
 import {signup, login, getProfile} from '../../services/auth'
 import {uploadFile} from '../../services/users'
+import SignupUser from './SignupUser';
+import SignupOrg from './SignupOrg';
 
 class AuthPage extends Component {
   state={
@@ -93,27 +95,33 @@ class AuthPage extends Component {
     return (
       <div className="auth">
         <div className="auth-container">
-          {/* <div> */}
-            {pathname==='/login'?
-            <div>
-              {!loading ? 
-              <LoginForm login={login} handleText={handleText}/> 
-              : 
-              <Spin tip="Loading...">
-                <LoginForm login={login} handleText={handleText}/>
-              </Spin>}
-            </div>
-            :
-            <div>
-              {!loading ? 
-              <SignupForm signup={signup} handleText={handleText} onChange={onChange} current={user}/> 
-              : 
-              <Spin tip="Loading...">
-                <SignupForm signup={signup} handleText={handleText} onChange={onChange}/>
-              </Spin>}
-            </div>
-            }
-          {/* </div> */}
+          {pathname==='/login'?
+          <div>
+            {!loading ? 
+            <LoginForm login={login} handleText={handleText}/> 
+            : 
+            <Spin tip="Loading...">
+              <LoginForm login={login} handleText={handleText}/>
+            </Spin>}
+          </div>
+          :
+          // <div>
+          //   {!loading ? 
+          //   <SignupForm signup={signup} handleText={handleText} onChange={onChange} current={user}/> 
+          //   : 
+          //   <Spin tip="Loading...">
+          //     <SignupForm signup={signup} handleText={handleText} onChange={onChange}/>
+          //   </Spin>}
+          // </div>
+          <div>
+            {!loading ? 
+            <SignupOrg signup={signup} handleText={handleText} onChange={onChange} current={user}/> 
+            : 
+            <Spin tip="Loading...">
+              <SignupOrg signup={signup} handleText={handleText} onChange={onChange}/>
+            </Spin>}
+          </div>
+          }
         </div>
       </div>
     )

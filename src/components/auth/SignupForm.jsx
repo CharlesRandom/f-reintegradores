@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Icon, Input, Radio,  Button, Upload, DatePicker, Select } from 'antd';
+import { Form, Icon, Input, Radio, Button, Upload, DatePicker, Select } from 'antd';
 import moment from 'moment';
 
 const FormItem = Form.Item;
@@ -11,7 +11,6 @@ const dateFormat = 'YYYY/MM/DD';
 const SignupForm = ({signup, handleText, onChange, current}) => {
   return (
     <div className="auth-form">
-      {/* <h2>REGISTRO | Donatario</h2> */}
       <div style={{display:"flex",justifyContent:"center"}}>
         <h2 style={{fontFamily:"Brandon Bold"}}>REGISTRO</h2>
         <h2>&nbsp;|&nbsp;</h2>
