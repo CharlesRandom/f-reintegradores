@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Spin, message } from 'antd';
 import './Auth.css'
 import LoginForm from './LoginForm'
-import SignupForm from './SignupForm'
+import SignupDon from './SignupDon'
 import {signup, login, getProfile} from '../../services/auth'
 import {uploadFile} from '../../services/users'
 import SignupUser from './SignupUser';
@@ -13,6 +13,7 @@ class AuthPage extends Component {
   state={
     user:{},
     current:{},
+    userType:"none",
     loading:false
   }
   
@@ -20,6 +21,14 @@ class AuthPage extends Component {
     message.error(e);
     this.setState({loading:false})
   };
+
+  signupUser = e => {
+    const {user} = this.state
+    e.preventDefault()
+    console.log(user)
+    this.setState({userType:user.userType})
+    console.log(this.state)
+  }
 
   signup = e => {
     this.setState({loading:true})
@@ -65,12 +74,30 @@ class AuthPage extends Component {
       })
   }
 
+  onDateChange(date, dateString) {
+    // const {user} = this.state
+    console.log(this.state)
+    const e = {
+      target:{
+        name:"birthdate",
+        value:date
+      }
+    }
+    console.log(e)
+    // this.handleText(e)
+    const field = "birthdate"
+    const value = date
+    // user[field] = value
+    // console.log(user)
+    // this.setState({user})
+  }
+
   handleText = e => {
     const {user} = this.state
     const field = e.target.name
     const value = e.target.value
     user[field] = value
-    // console.log(user)
+    console.log(user)
     this.setState({user})
   }
 
@@ -91,8 +118,8 @@ class AuthPage extends Component {
 
   render() {
       const {pathname} = this.props.location
-      const { signup, login, handleText, onChange } = this
-      const {loading, user} = this.state
+      const { signupUser, signup, login, handleText, onChange, onDateChange } = this
+      const {loading, user, userType} = this.state
     return (
       <div className="auth">
         <div className="auth-container">
@@ -106,20 +133,19 @@ class AuthPage extends Component {
             </Spin>}
           </div>
           :
-          // <div>
-          //   {!loading ? 
-          //   <SignupForm signup={signup} handleText={handleText} onChange={onChange} current={user}/> 
-          //   : 
-          //   <Spin tip="Loading...">
-          //     <SignupForm signup={signup} handleText={handleText} onChange={onChange}/>
-          //   </Spin>}
-          // </div>
           <div>
             {!loading ? 
-            <SignupVisit signup={signup} handleText={handleText} onChange={onChange} current={user}/> 
+            
+              {
+                "none": <SignupUser signupUser={signupUser} handleText={handleText}/>,
+                "Donatario": <SignupDon signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange}/>,
+                "Organización": <SignupOrg signup={signup} handleText={handleText} onChange={onChange}/>,
+                "Visitante": <SignupVisit signup={signup} handleText={handleText} onChange={onChange}/>
+              }[userType]
+            
             : 
             <Spin tip="Loading...">
-              <SignupVisit signup={signup} handleText={handleText} onChange={onChange}/>
+              <SignupDon signup={signup} handleText={handleText} onChange={onChange}/>
             </Spin>}
           </div>
           }

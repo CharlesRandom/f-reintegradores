@@ -4,22 +4,21 @@ import { Form, Radio, Button, } from 'antd';
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 
-const SignupUser = ({signup, handleText, onChange, current}) => {
+const SignupUser = ({signupUser, handleText}) => {
   return (
     <div className="auth-form">
       <div style={{display:"flex",justifyContent:"center"}}>
         <h2 style={{fontFamily:"Brandon Bold"}}>REGISTRO</h2>
       </div>
-      <Form layout="vertical" method="POST" onSubmit={signup}>
+      <Form layout="vertical" method="POST" onSubmit={signupUser}>
         <div className="user-signup-container">
-          {/* <h2>Tipo de usuario</h2> */}
+          <h2>Tipo de usuario</h2>
           <div className="user-radio-container">
-            <h2>Tipo de usuario</h2>
             <FormItem>
-              <RadioGroup name="donationOrigin" onChange={handleText}>
-                <Radio value="Donatario">Donatario</Radio><br/>
-                <Radio value="Organización">Organización</Radio><br/>
-                <Radio value="Visitante">Visitante</Radio><br/>
+              <RadioGroup name="userType" onChange={handleText}>
+                <Radio value="Donatario">Donatario</Radio>
+                <Radio value="Organización">Organización</Radio>
+                <Radio value="Visitante">Visitante</Radio>
               </RadioGroup>
             </FormItem>
           </div>

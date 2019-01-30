@@ -25,16 +25,19 @@
 /* user */
 .user-signup-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
 }
 
 .user-radio-container {
-  width: 150px;
-  height: 100%;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
   text-align: left;
-  color: white;
 }
 
 .radio-files-container {
