@@ -107,11 +107,9 @@ const SignupOrg = ({signup, handleText, onChange, current}) => {
             </Upload>
           </FormItem>
           <FormItem>
-            <Upload onChange={(info)=>onChange(info,"plantilla")}>
-              <Button>
-                <Icon type="upload" /> Descargar plantilla
-              </Button>
-            </Upload>
+            <Button>
+              <Icon type="download" /> Descargar plantilla
+            </Button>
           </FormItem>
         </div>
         <FormItem>

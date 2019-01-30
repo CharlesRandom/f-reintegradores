@@ -7,6 +7,7 @@ import {signup, login, getProfile} from '../../services/auth'
 import {uploadFile} from '../../services/users'
 import SignupUser from './SignupUser';
 import SignupOrg from './SignupOrg';
+import SignupVisit from './SignupVisit';
 
 class AuthPage extends Component {
   state={
@@ -115,10 +116,10 @@ class AuthPage extends Component {
           // </div>
           <div>
             {!loading ? 
-            <SignupOrg signup={signup} handleText={handleText} onChange={onChange} current={user}/> 
+            <SignupVisit signup={signup} handleText={handleText} onChange={onChange} current={user}/> 
             : 
             <Spin tip="Loading...">
-              <SignupOrg signup={signup} handleText={handleText} onChange={onChange}/>
+              <SignupVisit signup={signup} handleText={handleText} onChange={onChange}/>
             </Spin>}
           </div>
           }
