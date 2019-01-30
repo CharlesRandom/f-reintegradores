@@ -109,3 +109,47 @@
 .login-form button {
   width: 100px;
 }
+
+/* Organization */
+.org-basic-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.org-basic-container input {
+  width: 400px;
+}
+
+.org-basic-container button {
+  width: 300px;
+}
+
+.org-resources-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.org-data-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.org-data-container input {
+  width: 400px;
+}
+
+.org-data-container button {
+  width: 300px;
+}
