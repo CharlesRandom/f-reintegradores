@@ -8,7 +8,7 @@ const Option = Select.Option;
 
 const dateFormat = 'YYYY/MM/DD';
 
-const SignupVisit = ({signup, handleText, onChange, current}) => {
+const SignupVisit = ({signup, handleText, onChange, onDateChange, onSelectChange }) => {
   return (
     <div className="auth-form">
       <div style={{display:"flex",justifyContent:"center"}}>
@@ -43,11 +43,13 @@ const SignupVisit = ({signup, handleText, onChange, current}) => {
             </FormItem>
             <FormItem>
               <DatePicker placeholder="Fecha de nacimiento" 
+                onChange={(date, dateString) => onDateChange(date,"birthdate")}
                 style={{width:"400px"}} 
                 defaultPickerValue={moment('2000/01/01', dateFormat)} />
             </FormItem>
             <FormItem>
               <Select
+                onChange={value=>onSelectChange(value,"country")}
                 showSearch
                 style={{ width: 400 }}
                 placeholder="País"
@@ -61,6 +63,7 @@ const SignupVisit = ({signup, handleText, onChange, current}) => {
             </FormItem>
             <FormItem>
               <Select
+                onChange={value=>onSelectChange(value,"objective")}
                 showSearch
                 style={{ width: 400 }}
                 placeholder="Objetivo 2030"

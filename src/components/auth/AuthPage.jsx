@@ -74,28 +74,25 @@ class AuthPage extends Component {
       })
   }
 
-  onDateChange(date, dateString) {
-    // const {user} = this.state
-    console.log(this.state)
-    const e = {
-      target:{
-        name:"birthdate",
-        value:date
-      }
-    }
-    console.log(e)
-    // this.handleText(e)
-    const field = "birthdate"
+  onDateChange = (date, field) => {
+    const {user} = this.state
     const value = date
-    // user[field] = value
-    // console.log(user)
-    // this.setState({user})
+    user[field] = value
+    console.log(user)
+    this.setState({user})
   }
 
   handleText = e => {
     const {user} = this.state
     const field = e.target.name
     const value = e.target.value
+    user[field] = value
+    console.log(user)
+    this.setState({user})
+  }
+
+  onSelectChange = (value,field) => {
+    const {user} = this.state
     user[field] = value
     console.log(user)
     this.setState({user})
@@ -118,7 +115,7 @@ class AuthPage extends Component {
 
   render() {
       const {pathname} = this.props.location
-      const { signupUser, signup, login, handleText, onChange, onDateChange } = this
+      const { signupUser, signup, login, handleText, onChange, onDateChange, onSelectChange } = this
       const {loading, user, userType} = this.state
     return (
       <div className="auth">
@@ -138,9 +135,9 @@ class AuthPage extends Component {
             
               {
                 "none": <SignupUser signupUser={signupUser} handleText={handleText}/>,
-                "Donatario": <SignupDon signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange}/>,
-                "Organización": <SignupOrg signup={signup} handleText={handleText} onChange={onChange}/>,
-                "Visitante": <SignupVisit signup={signup} handleText={handleText} onChange={onChange}/>
+                "Donatario": <SignupDon signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
+                "Organización": <SignupOrg signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange}/>,
+                "Visitante": <SignupVisit signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange}/>
               }[userType]
             
             : 

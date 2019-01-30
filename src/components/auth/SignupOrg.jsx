@@ -1,16 +1,15 @@
 import React from 'react'
 import { Form, Icon, Input, Radio, Button, 
-  Upload, DatePicker, Select, Alert, Divider, InputNumber } from 'antd';
+  Upload, DatePicker, Alert, Divider, InputNumber } from 'antd';
 import moment from 'moment';
 
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
-const Option = Select.Option;
 const { TextArea } = Input;
 
 const dateFormat = 'YYYY/MM/DD';
 
-const SignupOrg = ({signup, handleText, onChange, current}) => {
+const SignupOrg = ({signup, handleText, onChange, onDateChange}) => {
   return (
     <div className="auth-form">
       <div style={{display:"flex",justifyContent:"center"}}>
@@ -34,7 +33,8 @@ const SignupOrg = ({signup, handleText, onChange, current}) => {
         </div>
         <div className="org-basic-container">
           <FormItem>
-            <DatePicker placeholder="Fecha de fundación" 
+            <DatePicker placeholder="Fecha de fundación"
+              onChange={(date, dateString) => onDateChange(date,"establishment")} 
               style={{width:"400px"}} 
               defaultPickerValue={moment('2015/01/01', dateFormat)} />
             <Alert message="Mínimo 3 años de haberse fundado" type="warning" showIcon />
@@ -63,8 +63,8 @@ const SignupOrg = ({signup, handleText, onChange, current}) => {
           <div className="org-resources-container">
             <FormItem>
               <RadioGroup name="receivedResources" onChange={handleText}>
-                <Radio value="Si">Si</Radio><br/>
-                <Radio value="No">No</Radio><br/>
+                <Radio value={true}>Si</Radio><br/>
+                <Radio value={false}>No</Radio><br/>
               </RadioGroup>
             </FormItem>
             <FormItem>
@@ -76,9 +76,9 @@ const SignupOrg = ({signup, handleText, onChange, current}) => {
           </div>
           <h3>¿Es donataria?</h3>
           <FormItem>
-            <RadioGroup name="donataria" onChange={handleText}>
-              <Radio value="Si">Si</Radio><br/>
-              <Radio value="No">No</Radio><br/>
+            <RadioGroup name="donee" onChange={handleText}>
+              <Radio value={true}>Si</Radio><br/>
+              <Radio value={false}>No</Radio><br/>
             </RadioGroup>
           </FormItem>
           <FormItem>
@@ -91,16 +91,16 @@ const SignupOrg = ({signup, handleText, onChange, current}) => {
           <h3>¿Tuvo Proyectos anteriores?</h3>
           <FormItem>
             <RadioGroup name="formerProyects" onChange={handleText}>
-              <Radio value="Si">Si</Radio><br/>
-              <Radio value="No">No</Radio><br/>
+              <Radio value={true}>Si</Radio><br/>
+              <Radio value={false}>No</Radio><br/>
             </RadioGroup>
           </FormItem>
           <h3>¿Cuántos?</h3>
           <FormItem>
-            <InputNumber min={1} max={100} defaultValue={3} onChange={onChange} />
+            <InputNumber min={1} max={100} defaultValue={3} onChange={(value)=>onDateChange(value,"numFormerProyects")} />
           </FormItem>
           <FormItem>
-            <Upload onChange={(info)=>onChange(info,"cumplimiento")}>
+            <Upload onChange={(info)=>onChange(info,"complianceformerProyects")}>
               <Button>
                 <Icon type="upload" /> Cumplimiento proyectos anteriores
               </Button>
@@ -113,7 +113,7 @@ const SignupOrg = ({signup, handleText, onChange, current}) => {
           </FormItem>
         </div>
         <FormItem>
-          <TextArea style={{width:"80%"}} rows={4} placeholder="Observaciones"/>
+          <TextArea name="comment" onChange={handleText} style={{width:"80%"}} rows={4} placeholder="Observaciones"/>
         </FormItem>
       </Form>
     </div>
