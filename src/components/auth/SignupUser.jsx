@@ -19,6 +19,8 @@ const SignupUser = ({signupUser, handleText}) => {
                 <Radio value="Donatario">Donatario</Radio>
                 <Radio value="Organización">Organización</Radio>
                 <Radio value="Visitante">Visitante</Radio>
+                <Radio value="ProyectoÁngel">Proyecto Ángel</Radio>
+                <Radio value="FormaciónAyuda">Tu Formación Ayuda</Radio>
               </RadioGroup>
             </FormItem>
           </div>

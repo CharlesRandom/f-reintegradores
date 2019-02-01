@@ -1,3 +1,7 @@
+.form {
+  margin: 50px 130px;
+}
+
 .ant-form-item {
   padding-bottom: 3px;
   margin-bottom: 3px;
@@ -59,7 +63,7 @@
   justify-content: center;
   align-content: space-between;
   align-items: center;
-  text-align: center;
+  text-align: left;
   color: white;
 }
 
@@ -124,11 +128,11 @@
 }
 
 .org-basic-container input {
-  width: 400px;
+  width: 300px;
 }
 
 .org-basic-container button {
-  width: 300px;
+  width: 250px;
 }
 
 .org-resources-container {
@@ -150,7 +154,7 @@
 }
 
 .org-data-container input {
-  width: 400px;
+  width: 300px;
 }
 
 .org-data-container button {
@@ -168,4 +172,11 @@
 
 .visit-container input {
   width: 400px;
+}
+
+.isotipo {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 100px;
 }

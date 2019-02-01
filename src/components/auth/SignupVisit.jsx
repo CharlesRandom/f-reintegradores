@@ -1,21 +1,23 @@
 import React from 'react'
-import { Form, Icon, Input, Radio, Button, Upload, DatePicker, Select } from 'antd';
+import { Form, Icon, Input, Button, DatePicker, Select } from 'antd';
 import moment from 'moment';
+import isotipo from '../../images/Isotipo.png'
 
 const FormItem = Form.Item;
-const RadioGroup = Radio.Group;
 const Option = Select.Option;
 
 const dateFormat = 'YYYY/MM/DD';
 
-const SignupVisit = ({signup, handleText, onChange, onDateChange, onSelectChange }) => {
+const SignupVisit = ({signup, handleText, onDateChange, onSelectChange }) => {
   return (
     <div className="auth-form">
+      <img className="isotipo" src={isotipo} alt="Reintegradores isotipo"/>
       <div style={{display:"flex",justifyContent:"center"}}>
         <h2 style={{fontFamily:"Brandon Bold"}}>REGISTRO</h2>
         <h2>&nbsp;|&nbsp;</h2>
         <h2>Visitante</h2>
       </div>
+      <div className="form">
       <Form layout="vertical" method="POST" onSubmit={signup}>
         <div className="visit-container">
           <div className="user-container">
@@ -76,14 +78,18 @@ const SignupVisit = ({signup, handleText, onChange, onDateChange, onSelectChange
                 <Option value="obj4">4. Educación de calidad</Option>
                 <Option value="obj5">5. Igualdad de género</Option>
                 <Option value="obj6">6. Agua limpia y saneamiento</Option>
+                <Option value="obj7">7. Energía asequible y no contaminante</Option>
+                <Option value="obj8">8. Trabajo decente y crecimiento económico</Option>
+                <Option value="obj9">9. Industria, innovación e infraestructura</Option>
+                <Option value="obj10">10. Educación de calidad</Option>
+                <Option value="obj11">11. Reducción de las desigualdades</Option>
+                <Option value="obj12">12. Producción y consumo responsable</Option>
+                <Option value="obj13">13. Acción por el clima</Option>
+                <Option value="obj14">14. Vida submarina</Option>
+                <Option value="obj15">15. Vida de Ecosistemas terrestres</Option>
+                <Option value="obj16">16. Paz, justicia e instituciones sólidas</Option>
+                <Option value="obj17">17. Alianzas para lograr los objetivos</Option>
               </Select>
-            </FormItem>
-            <FormItem>
-              <h3>Sexo (opcional)</h3>
-              <RadioGroup name="gender" onChange={handleText}>
-                <Radio value="Female">Femenino</Radio><br/>
-                <Radio value="Male">Masculino</Radio><br/>
-              </RadioGroup>
             </FormItem>
           </div>
         </div>
@@ -93,6 +99,7 @@ const SignupVisit = ({signup, handleText, onChange, onDateChange, onSelectChange
           </div>
         </FormItem>
       </Form>
+      </div>
     </div>
   )
 }

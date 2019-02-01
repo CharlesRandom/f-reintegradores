@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form, Icon, Input, Radio, Button, Upload, DatePicker, Select } from 'antd';
 import moment from 'moment';
+import isotipo from '../../images/Isotipo.png'
 
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
@@ -11,11 +12,13 @@ const dateFormat = 'YYYY/MM/DD';
 const SignupDon = ({signup, handleText, onChange, onDateChange, onSelectChange, current}) => {
   return (
     <div className="auth-form">
+      <img className="isotipo" src={isotipo} alt="Reintegradores isotipo"/>
       <div style={{display:"flex",justifyContent:"center"}}>
         <h2 style={{fontFamily:"Brandon Bold"}}>REGISTRO</h2>
         <h2>&nbsp;|&nbsp;</h2>
         <h2>Donatario</h2>
       </div>
+      <div className="form">
       <Form layout="vertical" method="POST" onSubmit={signup}>
         <div className="radio-files-container">
           <div className="radio-container">
@@ -119,12 +122,6 @@ const SignupDon = ({signup, handleText, onChange, onDateChange, onSelectChange, 
                 <Option value="CAN">Canadá</Option>
               </Select>
             </FormItem>
-            <FormItem>
-              <RadioGroup name="gender" onChange={handleText}>
-                <Radio value="Female">Femenino</Radio><br/>
-                <Radio value="Male">Masculino</Radio><br/>
-              </RadioGroup>
-            </FormItem>
           </div>
         </div>
         <FormItem>
@@ -133,6 +130,7 @@ const SignupDon = ({signup, handleText, onChange, onDateChange, onSelectChange, 
           </div>
         </FormItem>
       </Form>
+      </div>
     </div>
   )
 }

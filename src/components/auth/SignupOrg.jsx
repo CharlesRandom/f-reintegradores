@@ -2,6 +2,7 @@ import React from 'react'
 import { Form, Icon, Input, Radio, Button, 
   Upload, DatePicker, Alert, Divider, InputNumber } from 'antd';
 import moment from 'moment';
+import isotipo from '../../images/Isotipo.png'
 
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
@@ -12,11 +13,13 @@ const dateFormat = 'YYYY/MM/DD';
 const SignupOrg = ({signup, handleText, onChange, onDateChange}) => {
   return (
     <div className="auth-form">
+      <img className="isotipo" src={isotipo} alt="Reintegradores isotipo"/>
       <div style={{display:"flex",justifyContent:"center"}}>
         <h2 style={{fontFamily:"Brandon Bold"}}>REGISTRO</h2>
         <h2>&nbsp;|&nbsp;</h2>
         <h2>Organización</h2>
       </div>
+      <div className="form">
       <Form layout="vertical" method="POST" onSubmit={signup}>
         <div className="org-basic-container">
           <FormItem>
@@ -115,7 +118,13 @@ const SignupOrg = ({signup, handleText, onChange, onDateChange}) => {
         <FormItem>
           <TextArea name="comment" onChange={handleText} style={{width:"80%"}} rows={4} placeholder="Observaciones"/>
         </FormItem>
+        <FormItem>
+          <div className="d-flex jcc aic">
+            <Button style={{width:"100px"}} type="primary" htmlType="submit">Sign up</Button>
+          </div>
+        </FormItem>
       </Form>
+      </div>
     </div>
   )
 }

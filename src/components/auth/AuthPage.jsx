@@ -8,6 +8,8 @@ import {uploadFile} from '../../services/users'
 import SignupUser from './SignupUser';
 import SignupOrg from './SignupOrg';
 import SignupVisit from './SignupVisit';
+import SignupAngel from './SignupAngel';
+import SignupFormacion from './SignupFormacion';
 
 class AuthPage extends Component {
   state={
@@ -135,9 +137,11 @@ class AuthPage extends Component {
             
               {
                 "none": <SignupUser signupUser={signupUser} handleText={handleText}/>,
-                "Donatario": <SignupDon signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
+                "Donatario": <SignupDon signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange} current={user} />,
                 "Organización": <SignupOrg signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange}/>,
-                "Visitante": <SignupVisit signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange}/>
+                "Visitante": <SignupVisit signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
+                "ProyectoÁngel":<SignupAngel />,
+                "FormaciónAyuda":<SignupFormacion />
               }[userType]
             
             : 
