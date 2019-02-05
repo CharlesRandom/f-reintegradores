@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Objetivos.css'
 import HomeObjetivos from '../home/HomeObjetivos';
+import Navbar from '../general/Navbar';
 
 class Objetivos extends Component {
 
@@ -17,6 +18,7 @@ class Objetivos extends Component {
   render() {
     return (
       <div className="objetivos">
+        <Navbar />
         <HomeObjetivos />
       </div>
     )
