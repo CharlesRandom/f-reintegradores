@@ -5,6 +5,7 @@ import AuthPage from './components/auth/AuthPage';
 import Objetivos from './components/objetivos/Objetivos';
 import ConfirmationPage from './components/confirmation/ConfirmationPage';
 import ObjetivoDetail from './components/objetivos/ObjetivoDetail';
+import Proyectos from './components/proyectos/Proyectos';
 
 const Routes = () => (
   <Switch>
@@ -14,6 +15,7 @@ const Routes = () => (
     <Route path='/objetivos/detail/:id' component={ObjetivoDetail}/>
     <Route path='/objetivos' component={Objetivos}/>
     <Route path='/auth/confirm/:confirmationCode' component={ConfirmationPage}/>
+    <Route path='/proyectos' component={Proyectos}/>
   </Switch>
 )
 

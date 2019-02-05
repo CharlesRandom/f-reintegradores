@@ -1,0 +1,44 @@
+.proyectos {
+  width: 100%;
+  height: 100vh;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proyecto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  /* border: 1px black solid; */
+  margin: 30px;
+}
+
+.proyecto-card p {
+  margin: 10px;
+}
+
+.proyecto-card button {
+  max-width: 100px;
+}
+
+.proyecto-card img {
+  max-height: 30px;
+}
+
+.proyectos-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+.filtros {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  margin: 10px;
+}
