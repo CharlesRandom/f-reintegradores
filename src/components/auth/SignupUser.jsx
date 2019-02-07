@@ -8,7 +8,7 @@ const SignupUser = ({signupUser, handleText}) => {
   return (
     <div className="auth-form">
       <div style={{display:"flex",justifyContent:"center"}}>
-        <h2 style={{fontFamily:"Brandon Bold"}}>REGISTRO</h2>
+        <h2 style={{fontFamily:"Brandon Bold",marginTop:100}}>REGISTRO</h2>
       </div>
       <Form layout="vertical" method="POST" onSubmit={signupUser}>
         <div className="user-signup-container">

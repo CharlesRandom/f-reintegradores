@@ -44,11 +44,11 @@ class AuthPage extends Component {
         }
         else {
           console.log('Something went wrong, try sign up again')
-          this.authError('Something went wrong, try sign up again')
+          this.authError('Algo salió mal, intente registrarse nuevamente')
         }
       }).catch(e=>{
         console.log(e)
-        this.authError('Something went wrong, try sign up again')
+        this.authError('Algo salió mal, intente registrarse nuevamente')
       })
   }
 
@@ -67,12 +67,12 @@ class AuthPage extends Component {
           })
         }
         else {
-          console.log('Something went wrong, please check credentials')
-          this.authError('Something went wrong, please check credentials')
+          console.log('Something went wrong, please check console')
+          this.authError('Algo salió mal, por favor revise sus credenciales')
         }
       }).catch(e=>{
         console.log(e)
-        this.authError('Something went wrong, please check console')
+        this.authError('Algo salió mal, por favor revise sus credenciales')
       })
   }
 

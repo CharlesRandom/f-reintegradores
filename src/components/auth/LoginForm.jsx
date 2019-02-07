@@ -23,7 +23,7 @@ const LoginForm = ({login, handleText}) => {
           </FormItem>
           <FormItem>
             <div className="d-flex jcc aic">
-              <Button type="primary" htmlType="submit">Login</Button>
+              <Button type="primary" htmlType="submit">Iniciar sesión</Button>
             </div>
           </FormItem>
           <div className="d-flex jcc aic"><p>O <a href="/signup">regístrate ahora!</a></p></div>

@@ -34,16 +34,22 @@
   width: 100%;
   height: 70px;
   color: black;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: rgba(255, 255, 255, 0.95);
   display: flex;
   align-items: center;
+  align-content: center;
   justify-content: center;
   position: fixed;
   top: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .nav div {
   display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .nav img {
@@ -51,16 +57,16 @@
   margin-left: 20px;
 }
 
-.nav div p {
+.nav p {
   margin: 0 20px;
-  font-size: 4rem;
+  font-size: 1rem;
 }
 
 .nav a {
   text-decoration: none;
   color: #000;
   margin: 0 20px;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 

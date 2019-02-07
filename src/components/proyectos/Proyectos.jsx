@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { Select } from 'antd';
 import './Proyectos.css'
 import Navbar from '../general/Navbar';
@@ -54,12 +55,29 @@ class Proyectos extends Component {
             </Select>
           </div>
           <div className="proyectos-container">
+            {/* <Link to='/proyectos/detail'> */}
+              <ProyectoCard 
+                title="Proyecto A"
+                desc="Descripción proyecto A" />
+            {/* </Link> */}
             <ProyectoCard 
-              logo={Laboratoria}
-              desc="Talento tech femenino de latinoamérica para el mundo" />
+              title="Proyecto B"
+              desc="Descripción proyecto B" />
             <ProyectoCard 
-              logo={TrabajoDigno}
-              desc="Inserción laboral y emprendimientos exitosos" />
+              title="Proyecto C"
+              desc="Descripción proyecto C" />
+            <ProyectoCard 
+              title="Proyecto D"
+              desc="Descripción proyecto D" />
+            <ProyectoCard 
+              title="Proyecto E"
+              desc="Descripción proyecto E" />
+            <ProyectoCard 
+              title="Proyecto F"
+              desc="Descripción proyecto F" />
+            <ProyectoCard 
+              title="Proyecto G"
+              desc="Descripción proyecto G" />
           </div>
         </div>
       </div>

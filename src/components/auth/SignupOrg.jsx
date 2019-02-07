@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form, Icon, Input, Radio, Button, 
-  Upload, DatePicker, Alert, Divider, InputNumber } from 'antd';
+  Upload, DatePicker, Tooltip, Divider, InputNumber } from 'antd';
 import moment from 'moment';
 import isotipo from '../../images/Isotipo.png'
 
@@ -27,20 +27,29 @@ const SignupOrg = ({signup, handleText, onChange, onDateChange}) => {
               style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Nombre de la organización" />
           </FormItem>
           <FormItem>
+            <Input name="email" onChange={handleText} prefix={<Icon type="mail" 
+              style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Email" />
+          </FormItem>
+          <FormItem>
+            <Input name="password" onChange={handleText} prefix={<Icon type="lock" 
+              style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+          </FormItem>
+        </div>
+        <div className="org-basic-container">
+          <FormItem>
             <Upload onChange={(info)=>onChange(info,"actaConstitutiva")}>
               <Button>
                 <Icon type="upload" /> Acta Constitutiva
               </Button>
             </Upload>
           </FormItem>
-        </div>
-        <div className="org-basic-container">
           <FormItem>
-            <DatePicker placeholder="Fecha de fundación"
-              onChange={(date, dateString) => onDateChange(date,"establishment")} 
-              style={{width:"400px"}} 
-              defaultPickerValue={moment('2015/01/01', dateFormat)} />
-            <Alert message="Mínimo 3 años de haberse fundado" type="warning" showIcon />
+            <Tooltip placement="topLeft" title="Mínimo 3 años de haberse fundado" arrowPointAtCenter>
+              <DatePicker placeholder="Fecha de fundación"
+                onChange={(date, dateString) => onDateChange(date,"establishment")} 
+                style={{width:"400px"}} 
+                defaultPickerValue={moment('2015/01/01', dateFormat)} />
+            </Tooltip>
           </FormItem>
         </div>
         <Divider />
@@ -116,11 +125,11 @@ const SignupOrg = ({signup, handleText, onChange, onDateChange}) => {
           </FormItem>
         </div>
         <FormItem>
-          <TextArea name="comment" onChange={handleText} style={{width:"80%"}} rows={4} placeholder="Observaciones"/>
+          <TextArea name="comment" onChange={handleText} style={{width:"60%"}} rows={2} placeholder="Observaciones"/>
         </FormItem>
         <FormItem>
           <div className="d-flex jcc aic">
-            <Button style={{width:"100px"}} type="primary" htmlType="submit">Sign up</Button>
+            <Button style={{width:"100px"}} type="primary" htmlType="submit">Registrar</Button>
           </div>
         </FormItem>
       </Form>
