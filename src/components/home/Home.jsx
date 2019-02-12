@@ -3,6 +3,7 @@ import { Scroller, Section } from 'react-fully-scrolled';
 import HomeLanding from './HomeLanding';
 import HomeVideo from './HomeVideo';
 import HomeObjetivos from './HomeObjetivos';
+import HomeNewsletter from './HomeNewsletter';
 
 
 export default class Home extends Component {
@@ -28,6 +29,9 @@ export default class Home extends Component {
         </Section>
         <Section>
           <HomeObjetivos />
+        </Section>
+        <Section>
+          <HomeNewsletter />
         </Section>
       </Scroller>
     )
