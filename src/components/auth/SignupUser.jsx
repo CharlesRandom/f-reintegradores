@@ -16,11 +16,11 @@ const SignupUser = ({signupUser, handleText}) => {
           <div className="user-radio-container">
             <FormItem>
               <RadioGroup name="userType" onChange={handleText}>
-                <Radio value="Donatario">Donatario</Radio>
-                <Radio value="Organización">Organización</Radio>
-                <Radio value="Visitante">Visitante</Radio>
-                <Radio value="ProyectoÁngel">Proyecto Ángel</Radio>
-                <Radio value="FormaciónAyuda">Tu Formación Ayuda</Radio>
+                <Radio value="Donatario">Donatario</Radio><br/>
+                <Radio value="Organización">Organización</Radio><br/>
+                <Radio value="Visitante">Visitante</Radio><br/>
+                <Radio value="ProyectoÁngel">Proyecto Ángel</Radio><br/>
+                <Radio value="FormaciónAyuda">Tu Formación Ayuda</Radio><br/>
               </RadioGroup>
             </FormItem>
           </div>

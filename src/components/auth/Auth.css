@@ -38,6 +38,7 @@
 .user-radio-container {
   margin: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-content: center;
   align-items: center;
@@ -180,7 +181,7 @@
 
 .isotipo {
   position: fixed;
-  top: 50px;
+  top: 70px;
   right: 50px;
   width: 100px;
 }

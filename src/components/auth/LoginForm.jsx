@@ -7,7 +7,7 @@ const FormItem = Form.Item;
 const LoginForm = ({login, handleText}) => {
   return (
     <div className="login-form">
-      <h1>Iniciar Sesión</h1>
+      <h1>INICIAR SESIÓN</h1>
       <div className="login-isotipo-form">
         <div className="login-isotipo">
           <img src={isotipo} alt="Reintegradores logo"/>

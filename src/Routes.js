@@ -7,13 +7,14 @@ import ConfirmationPage from './components/confirmation/ConfirmationPage';
 import ObjetivoDetail from './components/objetivos/ObjetivoDetail';
 import Proyectos from './components/proyectos/Proyectos';
 import ProyectoDetail from './components/proyectos/ProyectoDetail';
+import ProyectosRegion from './components/proyectos/ProyectosRegion';
 
 const Routes = () => (
   <Switch>
     <Route exact path='/' component={Home}/>
     <Route path='/signup' component={AuthPage}/>
     <Route path='/login' component={AuthPage}/>
-    <Route path='/objetivos/detail/:id' component={ObjetivoDetail}/>
+    <Route path='/objetivos/detail/:id' component={ProyectosRegion}/>
     <Route path='/objetivos' component={Objetivos}/>
     <Route path='/auth/confirm/:confirmationCode' component={ConfirmationPage}/>
     <Route path='/proyectos/detail' component={ProyectoDetail}/>

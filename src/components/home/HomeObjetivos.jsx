@@ -20,6 +20,9 @@ import obj16 from '../../images/objetivos/Botones_Objetivos_172x115px_16.png'
 import obj17 from '../../images/objetivos/Botones_Objetivos_172x115px_17.png'
 import obj18 from '../../images/objetivos/Botones_Objetivos_172x115px_18.png'
 
+// const linkTo = '/objetivos/detail/obj'
+const linkTo = '/proyectos'
+
 const HomeObjetivos = ({ onObjClick }) => {
   return (
     <div className="objetivos">
@@ -32,23 +35,23 @@ const HomeObjetivos = ({ onObjClick }) => {
           </h3>
         </div>
         <div className="obj-container">
-          <Link to="/objetivos/detail/obj1"><img src={obj1} alt="Objetivo 1"/></Link>
-          <Link to="/objetivos/detail/obj2"><img src={obj2} alt="Objetivo 2"/></Link>
-          <Link to="/objetivos/detail/obj3"><img src={obj3} alt="Objetivo 3"/></Link>
-          <Link to="/objetivos/detail/obj4"><img src={obj4} alt="Objetivo 4"/></Link>
-          <Link to="/objetivos/detail/obj5"><img src={obj5} alt="Objetivo 5"/></Link>
-          <Link to="/objetivos/detail/obj6"><img src={obj6} alt="Objetivo 6"/></Link>
-          <Link to="/objetivos/detail/obj7"><img src={obj7} alt="Objetivo 7"/></Link>
-          <Link to="/objetivos/detail/obj8"><img src={obj8} alt="Objetivo 8"/></Link>
-          <Link to="/objetivos/detail/obj9"><img src={obj9} alt="Objetivo 9"/></Link>
-          <Link to="/objetivos/detail/obj10"><img src={obj10} alt="Objetivo 10"/></Link>
-          <Link to="/objetivos/detail/obj11"><img src={obj11} alt="Objetivo 11"/></Link>
-          <Link to="/objetivos/detail/obj12"><img src={obj12} alt="Objetivo 12"/></Link>
-          <Link to="/objetivos/detail/obj13"><img src={obj13} alt="Objetivo 13"/></Link>
-          <Link to="/objetivos/detail/obj14"><img src={obj14} alt="Objetivo 14"/></Link>
-          <Link to="/objetivos/detail/obj15"><img src={obj15} alt="Objetivo 15"/></Link>
-          <Link to="/objetivos/detail/obj16"><img src={obj16} alt="Objetivo 16"/></Link>
-          <Link to="/objetivos/detail/obj17"><img src={obj17} alt="Objetivo 17"/></Link>
+          <Link to={linkTo}><img src={obj1} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj2} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj3} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj4} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj5} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj6} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj7} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj8} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj9} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj10} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj11} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj12} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj13} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj14} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj15} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj16} alt={linkTo}/></Link>
+          <Link to={linkTo}><img src={obj17} alt={linkTo}/></Link>
           <img src={obj18} alt="Objetivos Desarrollo Sostenible"/>
         </div>
       </div>

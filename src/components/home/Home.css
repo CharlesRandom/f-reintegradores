@@ -68,8 +68,7 @@
 }
 
 .obj-container {
-  max-width: 1200px;
-  margin: 10px;
+  max-width: 1100px;
   display: flex;
   flex-wrap: wrap;
   flex-grow: 6;
@@ -78,7 +77,8 @@
 }
 
 .obj-container img {
-  margin: 5px;
+  max-width: 170px;
+  height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

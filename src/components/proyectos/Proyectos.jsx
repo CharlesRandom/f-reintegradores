@@ -6,6 +6,7 @@ import Navbar from '../general/Navbar';
 import Laboratoria from '../../images/proyectos/Logo_Laboratoria_173x30px-01.png'
 import TrabajoDigno from '../../images/proyectos/Logo_ProyectoTrabajoDigno_173x71px-01.png'
 import ProyectoCard from './ProyectoCard';
+import isotipo from '../../images/Isotipo.png'
 
 const Option = Select.Option;
 
@@ -15,6 +16,7 @@ class Proyectos extends Component {
       <div>
         <Navbar />
         <div className="proyectos">
+          <img className="isotipo" src={isotipo} alt="Reintegradores isotipo"/>
           <h1>Proyectos</h1>
           <div className="filtros">
             <Select
