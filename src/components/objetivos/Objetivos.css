@@ -30,11 +30,10 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.nav {
+/* .nav {
   width: 100%;
   height: 70px;
   color: black;
-  /* background-color: transparent; */
   background-color: rgba(255, 255, 255, 0.95);
   display: flex;
   align-items: center;
@@ -60,6 +59,7 @@
 
 .nav p {
   margin: 0 20px;
+  cursor: pointer;
   font-size: 1rem;
 }
 
@@ -68,7 +68,7 @@
   color: #000;
   margin: 0 20px;
   font-size: 1.2em;
-}
+} */
 
 
 /* Objetivo detail */

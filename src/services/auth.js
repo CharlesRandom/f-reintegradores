@@ -18,6 +18,12 @@ export const login = user => {
 }
 
 //logout
+export const logout = () => {
+  console.log("closing session from auth")
+  return axios.get(host + '/logout')
+    .then(r => r.data)
+    .catch(e => e.response)
+}
 
 //email confirmation
 export const confirmation = token => {
