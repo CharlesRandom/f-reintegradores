@@ -11,6 +11,17 @@ import isotipo from '../../images/Isotipo.png'
 const Option = Select.Option;
 
 class Proyectos extends Component {
+
+  state = {
+    user:{}
+  }
+
+  componentWillMount(){
+    const user = JSON.parse(localStorage.getItem('loggedUser'))
+    if(!user || !user.name) this.props.history.push('/login')
+    else this.setState({user})
+  }
+  
   render() {
     return (
       <div>
