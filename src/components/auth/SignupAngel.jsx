@@ -95,7 +95,7 @@ const SignupAngel = ({signup, handleText, onDateChange, onSelectChange }) => {
           </div>
         </div>
         <FormItem>
-          <TextArea name="comment" onChange={handleText} style={{width:"60%"}} 
+          <TextArea name="projectDescription" onChange={handleText} style={{width:"60%"}} 
             rows={2} placeholder="Descripción del proyecto"/>
         </FormItem>
         <FormItem>

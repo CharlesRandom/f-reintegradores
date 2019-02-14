@@ -140,7 +140,7 @@ class AuthPage extends Component {
                 "Donatario": <SignupDon signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange} current={user} />,
                 "Organización": <SignupOrg signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange}/>,
                 "Visitante": <SignupVisit signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
-                "ProyectoÁngel":<SignupAngel />,
+                "ProyectoÁngel":<SignupAngel signup={signup} handleText={handleText} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
                 "FormaciónAyuda":<SignupFormacion />
               }[userType]
             

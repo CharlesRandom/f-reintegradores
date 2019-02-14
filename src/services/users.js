@@ -1,7 +1,7 @@
 import axios from 'axios'
 import firebase from './firebase'
 
-// const host = 'http://localhost:3000/pets'
+// const host = 'http://localhost:3000/users'
 const host = 'https://reintegradoresdev.herokuapp.com/users'
 
 //upload Constancia Situación Fiscal and Acta Constitutiva
