@@ -99,7 +99,6 @@
 
 .user-container input, button {
   width: 400px;
-  margin: 0 10px;
 }
 
 .login-form {
@@ -184,6 +183,19 @@
   top: 70px;
   right: 50px;
   width: 100px;
+}
+
+/* Formación */
+.schedule-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.schedule-container span {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 /* Login */

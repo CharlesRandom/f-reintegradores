@@ -126,7 +126,7 @@ const SignupDon = ({signup, handleText, onChange, onDateChange, onSelectChange, 
         </div>
         <FormItem>
           <div className="d-flex jcc aic">
-            <Button style={{width:"100px"}} type="primary" htmlType="submit">Sign up</Button>
+            <Button style={{width:"100px"}} type="primary" htmlType="submit">Registrar</Button>
           </div>
         </FormItem>
       </Form>

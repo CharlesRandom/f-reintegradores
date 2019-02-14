@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Icon, Input, Button, DatePicker, Select, TimePicker } from 'antd';
+import { Form, Icon, Input, Button, DatePicker, Select, TimePicker, Upload } from 'antd';
 import moment from 'moment';
 import isotipo from '../../images/Isotipo.png'
 
@@ -9,7 +9,7 @@ const Option = Select.Option;
 const dateFormat = 'YYYY/MM/DD';
 const timeFormat = 'HH:mm';
 
-const SignupFormacion = ({signup, handleText, onDateChange, onSelectChange, onTimeChange }) => {
+const SignupFormacion = ({signup, handleText, onDateChange, onSelectChange, onTimeChange, onChange }) => {
   return (
     <div className="auth-form">
       <img className="isotipo" src={isotipo} alt="Reintegradores isotipo"/>
@@ -37,6 +37,10 @@ const SignupFormacion = ({signup, handleText, onDateChange, onSelectChange, onTi
             <FormItem>
               <Input name="password" onChange={handleText} prefix={<Icon type="lock" 
                 style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+            </FormItem>
+            <FormItem>
+              <Input name="profession" onChange={handleText} prefix={<Icon type="book" 
+                style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Profesión" />
             </FormItem>
           </div>
           <div className="info-container">
@@ -92,11 +96,18 @@ const SignupFormacion = ({signup, handleText, onDateChange, onSelectChange, onTi
                 <Option value="obj17">17. Alianzas para lograr los objetivos</Option>
               </Select>
             </FormItem>
+            <FormItem>
+              <Upload onChange={(info)=>onChange(info,"curriculumVitae")}>
+                <Button>
+                  <Icon type="upload" /> Currículum Vitae
+                </Button>
+              </Upload>
+            </FormItem>
           </div>
         </div>
         <div>
           <p>Horario</p>
-          <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>
+          <div className="schedule-container">
             <FormItem>
               <TimePicker onChange={onTimeChange} defaultValue={moment('09:00', timeFormat)} format={timeFormat} />
             </FormItem>
@@ -105,6 +116,7 @@ const SignupFormacion = ({signup, handleText, onDateChange, onSelectChange, onTi
             </FormItem>
           </div>
         </div>
+        
         <FormItem>
           <div className="d-flex jcc aic">
             <Button style={{width:"100px"}} type="primary" htmlType="submit">Registrar</Button>
