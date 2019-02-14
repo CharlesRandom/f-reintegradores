@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const host = 'http://localhost:3000/auth'
-// const host = 'https://reintegradoresdev.herokuapp.com/auth'
+// const host = 'http://localhost:3000/auth'
+const host = 'https://reintegradoresdev.herokuapp.com/auth'
 
 //signup
 export const signup = user => {

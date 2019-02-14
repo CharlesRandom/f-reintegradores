@@ -84,6 +84,14 @@ class AuthPage extends Component {
     this.setState({user})
   }
 
+  onTimeChange = (time, field) => {
+    const {user} = this.state
+    const value = time
+    user[field] = value
+    console.log(user)
+    this.setState({user})
+  }
+
   handleText = e => {
     const {user} = this.state
     const field = e.target.name
@@ -117,7 +125,7 @@ class AuthPage extends Component {
 
   render() {
       const {pathname} = this.props.location
-      const { signupUser, signup, login, handleText, onChange, onDateChange, onSelectChange } = this
+      const { signupUser, signup, login, handleText, onChange, onDateChange, onSelectChange, onTimeChange } = this
       const {loading, user, userType} = this.state
     return (
       <div className="auth">
@@ -141,7 +149,7 @@ class AuthPage extends Component {
                 "Organización": <SignupOrg signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange}/>,
                 "Visitante": <SignupVisit signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
                 "ProyectoÁngel":<SignupAngel signup={signup} handleText={handleText} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
-                "FormaciónAyuda":<SignupFormacion />
+                "FormaciónAyuda":<SignupFormacion signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange} onTimeChange={onTimeChange} />
               }[userType]
             
             : 

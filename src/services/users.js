@@ -4,7 +4,7 @@ import firebase from './firebase'
 // const host = 'http://localhost:3000/users'
 const host = 'https://reintegradoresdev.herokuapp.com/users'
 
-//upload Constancia Situación Fiscal and Acta Constitutiva
+//upload Constancia Situación Fiscal, Acta Constitutiva, Curriculum, etc
 export const uploadFile=(file)=>{
   console.log('uploading file')
   const task = firebase.storage().ref('reintegradores').child(file.name).put(file)

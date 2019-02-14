@@ -109,10 +109,16 @@ const SignupFormacion = ({signup, handleText, onDateChange, onSelectChange, onTi
           <p>Horario</p>
           <div className="schedule-container">
             <FormItem>
-              <TimePicker onChange={onTimeChange} defaultValue={moment('09:00', timeFormat)} format={timeFormat} />
+              <TimePicker 
+              onChange={(time, timeString) => onTimeChange(time,"startTime")} 
+              placeholder="Entrada"
+              format={timeFormat} />
             </FormItem>
             <FormItem>
-              <TimePicker onChange={onTimeChange} defaultValue={moment('18:00', timeFormat)} format={timeFormat} />
+              <TimePicker 
+              onChange={(time, timeString) => onTimeChange(time,"endTime")} 
+              placeholder="Salida"
+              format={timeFormat} />
             </FormItem>
           </div>
         </div>
