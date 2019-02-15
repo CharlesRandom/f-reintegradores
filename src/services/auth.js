@@ -27,7 +27,7 @@ export const logout = () => {
 
 //email confirmation
 export const confirmation = token => {
-  return axios.post(host + token, {withCredentials:true})
+  return axios.get(host + token, {withCredentials:true})
     .then(r=>r.data)
     .catch(e=>e.response)
 }

@@ -16,7 +16,7 @@ const Routes = () => (
     <Route path='/login' component={AuthPage}/>
     <Route path='/objetivos/detail/:id' component={ProyectosRegion}/>
     <Route path='/objetivos' component={Objetivos}/>
-    <Route path='/auth/confirm/:confirmationCode' component={ConfirmationPage}/>
+    <Route path='/confirm/:confirmationCode' component={ConfirmationPage}/>
     <Route path='/proyectos/detail' component={ProyectoDetail}/>
     <Route path='/proyectos' component={Proyectos}/>
   </Switch>

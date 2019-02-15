@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Spin, message } from 'antd';
 import {confirmation} from '../../services/auth'
+import './Confirmation.css'
+// import { withRouter } from 'react-router-dom'
 
 class ConfirmationPage extends Component {
   state={
@@ -20,6 +22,7 @@ class ConfirmationPage extends Component {
     console.log(token)
     confirmation(token)
     .then(r => {
+      console.log(r)
       if(r._id){
         this.setState({loading:false})
         this.props.history.push('/login')
@@ -37,16 +40,17 @@ class ConfirmationPage extends Component {
   render() {
     const {loading} = this.state
     return (
-      <div>
+      <div className="confirmation">
         {!loading ? 
-              <h1>Correo confirmado, bienvenido a Reintegradores!</h1> 
-              : 
-              <Spin tip="Loading...">
-                <h1>Confirmando...</h1>
-              </Spin>}
+          <h1>Correo confirmado, bienvenido a Reintegradores!</h1> 
+          : 
+          <Spin tip="Loading...">
+            <h1>Confirmando...</h1>
+          </Spin>}
       </div>
     )
   }
 }
 
+// export default withRouter(ConfirmationPage)
 export default ConfirmationPage
