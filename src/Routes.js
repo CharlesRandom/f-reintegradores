@@ -8,6 +8,7 @@ import ObjetivoDetail from './components/objetivos/ObjetivoDetail';
 import Proyectos from './components/proyectos/Proyectos';
 import ProyectoDetail from './components/proyectos/ProyectoDetail';
 import ProyectosRegion from './components/proyectos/ProyectosRegion';
+import ConfirmationSuccess from './components/confirmation/ConfirmationSuccess';
 
 const Routes = () => (
   <Switch>
@@ -16,6 +17,7 @@ const Routes = () => (
     <Route path='/login' component={AuthPage}/>
     <Route path='/objetivos/detail/:id' component={ProyectosRegion}/>
     <Route path='/objetivos' component={Objetivos}/>
+    <Route path='/confirmation' component={ConfirmationSuccess}/>
     <Route path='/confirm/:confirmationCode' component={ConfirmationPage}/>
     <Route path='/proyectos/detail' component={ProyectoDetail}/>
     <Route path='/proyectos' component={Proyectos}/>
