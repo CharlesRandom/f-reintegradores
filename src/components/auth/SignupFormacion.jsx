@@ -112,11 +112,13 @@ const SignupFormacion = ({signup, handleText, onDateChange, onSelectChange, onTi
               <TimePicker 
               onChange={(time, timeString) => onTimeChange(time,"startTime")} 
               placeholder="Entrada"
+              defaultOpenValue={moment('09:00', timeFormat)} 
               format={timeFormat} />
             </FormItem>
             <FormItem>
               <TimePicker 
               onChange={(time, timeString) => onTimeChange(time,"endTime")} 
+              defaultOpenValue={moment('18:00', timeFormat)} 
               placeholder="Salida"
               format={timeFormat} />
             </FormItem>
