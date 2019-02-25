@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
-import videoReintegradores from '../../images/video/WereTheSuperhumans-RioParalympics2016Trailer.mp4'
-// import videoReintegradores from '../../images/animaciones/reintegradores_home.mp4'
+// import videoReintegradores from '../../images/video/WereTheSuperhumans-RioParalympics2016Trailer.mp4'
+import videoReintegradores from '../../images/video/home_landing.mp4'
 
 const HomeVideo = ({ onClick }) => {
   return (
