@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
-// import logotipo from '../../images/Logo-Curvas-Reintegradores.png'
+import logotipo from '../../images/Logo-Curvas-Reintegradores.png'
+// import logotipo from '../../images/animaciones/home_landing.gif'
 // import videoReintegradores from '../../images/video/home_landing.mp4'
 import videoReintegradores from '../../images/video/reintegradores_home.mp4'
 // import plecaInferior from '../../images/PlecaInferior.png'
@@ -16,7 +17,7 @@ const HomeLanding = () => {
     <div>
       <div className="home-landing">
         {/* <img src={logotipo} alt="Reintegradores isotipo"/> */}
-        <video className="center" src={videoReintegradores} controls autoPlay loop >
+        <video className="center" src={videoReintegradores} poster={logotipo} preload autoPlay loop muted playsInline>
           Your browser does not support the video tag.
         </video>
       </div>

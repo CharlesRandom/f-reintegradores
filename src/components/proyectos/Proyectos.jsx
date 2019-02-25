@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { Select } from 'antd';
 import './Proyectos.css'
 import Navbar from '../general/Navbar';
-import Laboratoria from '../../images/proyectos/Logo_Laboratoria_173x30px-01.png'
-import TrabajoDigno from '../../images/proyectos/Logo_ProyectoTrabajoDigno_173x71px-01.png'
+// import Laboratoria from '../../images/proyectos/Logo_Laboratoria_173x30px-01.png'
+// import TrabajoDigno from '../../images/proyectos/Logo_ProyectoTrabajoDigno_173x71px-01.png'
 import ProyectoCard from './ProyectoCard';
 import isotipo from '../../images/Isotipo.png'
 

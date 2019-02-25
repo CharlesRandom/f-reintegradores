@@ -4,7 +4,7 @@ import Home from './components/home/Home';
 import AuthPage from './components/auth/AuthPage';
 import Objetivos from './components/objetivos/Objetivos';
 import ConfirmationPage from './components/confirmation/ConfirmationPage';
-import ObjetivoDetail from './components/objetivos/ObjetivoDetail';
+// import ObjetivoDetail from './components/objetivos/ObjetivoDetail';
 import Proyectos from './components/proyectos/Proyectos';
 import ProyectoDetail from './components/proyectos/ProyectoDetail';
 import ProyectosRegion from './components/proyectos/ProyectosRegion';
