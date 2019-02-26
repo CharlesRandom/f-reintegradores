@@ -6,7 +6,8 @@ import HomeObjetivos from './HomeObjetivos';
 import HomeNewsletter from './HomeNewsletter';
 
 
-export default class Home extends Component {
+class Home extends Component {
+
   onClick = e => {
     // toggles play / pause
     e.target.paused ? e.target.play() : e.target.pause()
@@ -31,9 +32,11 @@ export default class Home extends Component {
           <HomeObjetivos />
         </Section>
         <Section>
-          <HomeNewsletter />
+          <HomeNewsletter  />
         </Section>
       </Scroller>
     )
   }
 }
+
+export default Home
