@@ -9,6 +9,8 @@ import Proyectos from './components/proyectos/Proyectos';
 import ProyectoDetail from './components/proyectos/ProyectoDetail';
 import ProyectosRegion from './components/proyectos/ProyectosRegion';
 import ConfirmationSuccess from './components/confirmation/ConfirmationSuccess';
+import NewProject from './components/proyectos/NewProject';
+import HomeNewsletter from './components/home/HomeNewsletter';
 
 const Routes = () => (
   <Switch>
@@ -20,7 +22,9 @@ const Routes = () => (
     <Route path='/confirmation' component={ConfirmationSuccess}/>
     <Route path='/confirm/:confirmationCode' component={ConfirmationPage}/>
     <Route path='/proyectos/detail' component={ProyectoDetail}/>
+    <Route path='/proyectos/new' component={NewProject}/>
     <Route path='/proyectos' component={Proyectos}/>
+    <Route path='/news' component={HomeNewsletter}/>
   </Switch>
 )
 

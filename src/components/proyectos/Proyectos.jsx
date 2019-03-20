@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom'
-import { Select } from 'antd';
+import { Link } from 'react-router-dom'
+import { Select, Button } from 'antd';
 import './Proyectos.css'
 import Navbar from '../general/Navbar';
 // import Laboratoria from '../../images/proyectos/Logo_Laboratoria_173x30px-01.png'
@@ -30,6 +30,9 @@ class Proyectos extends Component {
           <img className="isotipo" src={isotipo} alt="Reintegradores isotipo"/>
           <h1>Proyectos</h1>
           <div className="filtros">
+            <Link to="/proyectos/new">
+              <Button type="primary" icon="plus">Agregar proyecto</Button>
+            </Link>
             <Select
               // onChange={value=>onSelectChange(value,"country")}
               showSearch

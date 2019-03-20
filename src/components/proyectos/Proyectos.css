@@ -23,6 +23,13 @@
 
 .proyecto-card p {
   margin: 10px;
+  min-width: 200px;
+  max-width: 200px;
+}
+
+.proyecto-card h2 {
+  min-width: 200px;
+  max-width: 200px;
 }
 
 .proyecto-card button {
@@ -40,6 +47,8 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 0 100px;
+  max-height: 300px;
+  overflow: scroll;
 }
 
 .filtros {
@@ -48,6 +57,10 @@
   align-content: center;
   align-items: center;
   margin: 10px;
+}
+
+.filtros button {
+  width: 200px;
 }
 
 /* Detail */
@@ -114,4 +127,72 @@
 
 .detail-info-logo div {
   margin: 5px 30px;
+}
+
+/* New Project */
+.project-form h2 {
+  margin-top: 100px;
+}
+
+.project-form input {
+  width: 230px;
+}
+
+.project-form .project-basic {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-form .project-basic div{
+  width: 230px;
+}
+
+.project-form .project-desc {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-form .project-desc textarea {
+  min-width: 400px;
+}
+
+.project-form .project-desc button {
+  max-width: 150px;
+}
+
+.project-form .project-detail {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-form .project-detail input{
+  min-width: 300px;
+}
+
+.project-form .project-dates {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-form .project-dates input {
+  width: 400px;
+}
+
+.project-form .project-context {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-form .project-context textarea {
+  min-width: 500px;
+  min-height: 100px;
+}
+
+.project-form .project-docs {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-form .project-docs button {
+  max-width: 300px;
 }
