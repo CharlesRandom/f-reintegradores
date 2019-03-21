@@ -19,6 +19,15 @@
   color: #989899;
 }
 
+#logovideo {
+  width: auto;
+  height: 450px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .footer {
   width: 100%;
   height: 100px;
@@ -84,7 +93,7 @@
 }
 
 /* Video */
-video {
+#expvideo {
   width: auto;
   height: 450px;
   left: 50%;

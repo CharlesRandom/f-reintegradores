@@ -3,13 +3,14 @@ import { Spin, message } from 'antd';
 import './Auth.css'
 import LoginForm from './LoginForm'
 import SignupDon from './SignupDon'
-import {signup, login, getProfile} from '../../services/auth'
-import {uploadFile} from '../../services/users'
+import NewDon from './NewDon'
+import NewOrg from './NewOrg'
 import SignupUser from './SignupUser';
-import SignupOrg from './SignupOrg';
 import SignupVisit from './SignupVisit';
 import SignupAngel from './SignupAngel';
 import SignupFormacion from './SignupFormacion';
+import {signup, login, getProfile} from '../../services/auth'
+import {uploadFile} from '../../services/users'
 
 class AuthPage extends Component {
   state={
@@ -145,8 +146,8 @@ class AuthPage extends Component {
             
               {
                 "none": <SignupUser signupUser={signupUser} handleText={handleText}/>,
-                "Donatario": <SignupDon signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange} current={user} />,
-                "Organización": <SignupOrg signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange}/>,
+                "Donatario": <NewDon signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange} current={user} />,
+                "Organización": <NewOrg signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange}/>,
                 "Visitante": <SignupVisit signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
                 "ProyectoÁngel":<SignupAngel signup={signup} handleText={handleText} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
                 "FormaciónAyuda":<SignupFormacion signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange} onTimeChange={onTimeChange} />

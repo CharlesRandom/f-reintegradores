@@ -13,7 +13,7 @@ const dateFormat = 'YYYY/MM/DD';
 const SignupOrg = ({signup, handleText, onChange, onDateChange}) => {
   return (
     <div className="auth-form">
-      <img className="isotipo" src={isotipo} alt="Reintegradores isotipo"/>
+      <a href="/"><img className="isotipo" src={isotipo} alt="Reintegradores isotipo"/></a>
       <div style={{display:"flex",justifyContent:"center"}}>
         <h2 style={{fontFamily:"Brandon Bold"}}>REGISTRO</h2>
         <h2>&nbsp;|&nbsp;</h2>

@@ -3,7 +3,7 @@ import { Scroller, Section } from 'react-fully-scrolled';
 import HomeLanding from './HomeLanding';
 import HomeVideo from './HomeVideo';
 import HomeObjetivos from './HomeObjetivos';
-import HomeNewsletter from './HomeNewsletter';
+// import HomeNewsletter from './HomeNewsletter';
 
 
 class Home extends Component {
@@ -16,6 +16,12 @@ class Home extends Component {
   render() {
     const {onClick} = this
     return (
+      // <div>
+      //   <HomeLanding />
+      //   <HomeVideo onClick={onClick} />
+      //   <HomeObjetivos />
+      //   <HomeNewsletter />
+      // </div>
       <Scroller
         curPage={1}
         onBeforeScroll={(from, to) => {}}
@@ -31,9 +37,9 @@ class Home extends Component {
         <Section>
           <HomeObjetivos />
         </Section>
-        <Section>
+        {/* <Section>
           <HomeNewsletter  />
-        </Section>
+        </Section> */}
       </Scroller>
     )
   }

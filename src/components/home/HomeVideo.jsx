@@ -7,7 +7,7 @@ const HomeVideo = ({ onClick }) => {
   return (
     <div>
       <div className="video-container">
-        <video className="center" src={videoReintegradores} controls onClick={onClick} muted playsInline >
+        <video id="expvideo" src={videoReintegradores} controls onClick={onClick} muted playsInline >
           Your browser does not support the video tag.
         </video>
       </div>

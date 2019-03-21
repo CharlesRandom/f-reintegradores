@@ -22,10 +22,10 @@ class Navbar extends Component {
     return (
       <div className="nav">
         <Link to='/'><p>INICIO</p></Link>
-        <Link to='/nosotros'><p>NOSOTROS</p></Link>
+        {/* <Link to='/nosotros'><p>NOSOTROS</p></Link> */}
         <Link to='/objetivos'><p>OBJETIVOS</p></Link>
-        <Link to='/news'><p>NEWSLETTER</p></Link>
-        <Link to='/admin'><p>ADMINISTRACIÓN</p></Link>
+        {/* <Link to='/news'><p>NEWSLETTER</p></Link> */}
+        {/* <Link to='/admin'><p>ADMINISTRACIÓN</p></Link> */}
         <p onClick={logout}>CERRAR SESIÓN</p>
     </div>
     )

@@ -1,0 +1,22 @@
+/* SignUp Donatario */
+.donatario {
+  width: 850px;
+  text-align: center;
+  margin: 0 auto;
+}
+.donatario-form h3 {
+  margin-top: 20px;
+}
+.donatario-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.donatario-info input {
+  width: 400px;
+  margin-right: 10px;
+}
+.donatario-info div {
+  width: 400px;
+  margin-right: 10px;
+}

@@ -3,7 +3,6 @@ import './Home.css'
 import img1 from '../../images/news/news1.jpg'
 import img2 from '../../images/news/news2.jpg'
 import NewsCard from './NewsCard';
-import Navbar from '../general/Navbar';
 
 const title1 = 'PARQUE LINEAL PARA EL GRAN CANAL DE LA CDMX'
 const title2 = 'MÉXICO HACIA UNA ESTRATEGIA INTEGRAL DE RECICLAJE INCLUSIVO'
@@ -25,7 +24,6 @@ class HomeNewsletter extends Component {
     const {modal2Visible} = this.state
     return (
       <div className="newsletter">
-        <Navbar/>
         <div>
           <div className="news-header">
             <h1>NEWSLETTER</h1>

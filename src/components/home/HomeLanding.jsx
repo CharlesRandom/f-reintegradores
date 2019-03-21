@@ -13,7 +13,7 @@ const HomeLanding = () => {
   return (
     <div>
       <div className="home-landing">
-        <video className="center" src={videoReintegradores} poster={logotipo} preload autoPlay loop muted playsInline>
+        <video id="logovideo" className="center" src={videoReintegradores} poster={logotipo} preload autoPlay loop muted playsInline>
           Your browser does not support the video tag.
         </video>
       </div>
