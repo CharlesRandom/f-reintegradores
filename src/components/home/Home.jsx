@@ -3,6 +3,7 @@ import Navbar from '../general/Navbar';
 import './Home.css'
 import Presentation from './Presentation';
 import Projects from './Projects';
+import Benefits from './Benefits';
 
 class Home extends Component {
   render() {
@@ -11,6 +12,7 @@ class Home extends Component {
         <Navbar />
         <Presentation />
         <Projects />
+        <Benefits />
       </div>
     )
   }
