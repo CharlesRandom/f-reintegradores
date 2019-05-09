@@ -1,0 +1,77 @@
+/* Presentation */
+.presentation {
+  display: flex;
+  height: 640px;
+  background-image: url('../../images/presentation/bk_presentation.png');
+  background-color: white;
+  background-position: right;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.presentation-data {
+  width: 40%;
+  margin: 100px 20px 0 30px;
+}
+
+.presentation-data h3 {
+  width: 87%;
+  font-size: 36px;
+  line-height: 2.5rem;
+}
+
+.presentation-data h4 {
+  width: 92%;
+  font-size: 36px;
+  line-height: 2.5rem;
+}
+
+.presentation-data p {
+  width: 100%;
+  font-size: 22px;
+  margin: 40px 0;
+  line-height: 1.5rem;
+}
+
+.play-container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.play-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.play-container span {
+  font-size: 22px;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.btn-presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+  width: 150px;
+  height: 40px;
+  margin: 20px 30px;
+}
+
+.btn-presentation span {
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all .5s ease;
+}
+
+.btn-presentation span:hover {
+  font-weight: bold;
+  color: black;
+}
