@@ -18,13 +18,13 @@ const Presentation = () => {
           para la donación colectiva. 
           Trabajamos conectando fundaciones y asociaciones civiles 
           con personas y/o empresas dispuestas a colaborar con ellas 
-          de forma simple, rápida y transparente.
+          de forma simple, rápida y transparente.
         </p>
         <div className="play-container">
           <img className="play-icon" src={playIcon} alt="Play icon"/>
           <span>CONÓCENOS UN POCO MÁS</span>
         </div>
-        <h4>¡Súmate! Te estamos esperando:</h4>
+        <h4>¡Súmate! Te estamos esperando:</h4>
         <div className="btn-container">
           <div className="btn-presentation">
             <Link to="/"><span>DONACIÓN</span></Link>

@@ -5,8 +5,11 @@
   height: 75px;
 }
 .navbar .pleca {
-  margin-top: 70px;
   height: 5px;
+  width: 100%;
+  position: fixed;
+  top: 70px;
+  z-index: 100;
 }
 
 .nav {

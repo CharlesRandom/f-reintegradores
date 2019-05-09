@@ -1,0 +1,31 @@
+/* Projects */
+
+.projects {
+  height: 640px;
+  background-color: #f5f5f5;
+}
+
+.projects h2 {
+  padding-top: 60px;
+  margin: 0 30px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Brandon Bold';
+}
+
+.projects p {
+  width: 70%;
+  font-size: 22px;
+  margin: 30px;
+  line-height: 1.5rem;
+}
+
+.obj-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.obj-container img {
+  width: 195px;
+}

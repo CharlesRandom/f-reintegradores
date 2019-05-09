@@ -1,11 +1,11 @@
 /* Presentation */
 .presentation {
   display: flex;
-  height: 640px;
+  height: 650px;
   background-image: url('../../images/presentation/bk_presentation.png');
   background-color: white;
   background-position: right;
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
