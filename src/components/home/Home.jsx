@@ -4,6 +4,7 @@ import './Home.css'
 import Presentation from './Presentation';
 import Projects from './Projects';
 import Benefits from './Benefits';
+import How from './How';
 
 class Home extends Component {
   render() {
@@ -13,6 +14,7 @@ class Home extends Component {
         <Presentation />
         <Projects />
         <Benefits />
+        <How />
       </div>
     )
   }
