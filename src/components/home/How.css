@@ -1,11 +1,11 @@
 /* How it works */
 .how {
-  height: 640px;
+  height: 680px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background-image: url('../../images/how/bk_how.png');
-  background-color: white;
+  background-color: #f5f5f5;
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
