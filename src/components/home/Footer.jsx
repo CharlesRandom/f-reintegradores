@@ -23,10 +23,10 @@ const Footer = () => {
             <span>LOGO</span>
           </div>
           <div className="contact-footer">
-            <span>contacto@reintegradores.com</span><span>|</span>
-            <span>Condiciones de uso</span><span>|</span>
-            <span>Legales</span><span>|</span>
-            <span>Aviso de privacidad</span>
+            <span className="link">contacto@reintegradores.com</span><span>|</span>
+            <span className="link">Condiciones de uso</span><span>|</span>
+            <span className="link">Legales</span><span>|</span>
+            <span className="link">Aviso de privacidad</span>
           </div>
         </div>
       </div>

@@ -33,6 +33,7 @@
 
 .logos-footer span {
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .contact-footer {
@@ -44,6 +45,10 @@
 
 .contact-footer span {
   margin-left: 20px;
+}
+
+.contact-footer .link {
+  cursor: pointer;
 }
 
 .social {
@@ -62,4 +67,5 @@
 .social-icons img {
   height: 30px;
   margin-left: 5px;
+  cursor: pointer;
 }
