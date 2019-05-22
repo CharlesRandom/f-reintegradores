@@ -32,7 +32,7 @@ class Navbar extends Component {
             <Link to='/'><span>Contacto</span></Link>
             <Link to='/'><span>Login</span></Link>
             <div className="btn-donar">
-            <Link to='/'><span>Donar</span></Link>
+            <Link to='/donar'><span>Donar</span></Link>
             </div>
           </div>
         </div>

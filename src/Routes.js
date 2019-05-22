@@ -11,10 +11,12 @@ import ProyectosRegion from './components/proyectos/ProyectosRegion';
 import ConfirmationSuccess from './components/confirmation/ConfirmationSuccess';
 import NewProject from './components/proyectos/NewProject';
 import HomeNewsletter from './components/home/HomeNewsletter';
+import DonanteForm from './components/auth/DonanteForm';
 
 const Routes = () => (
   <Switch>
     <Route exact path='/' component={Home}/>
+    <Route path='/donar' component={DonanteForm}/>
     <Route path='/signup' component={AuthPage}/>
     <Route path='/login' component={AuthPage}/>
     <Route path='/objetivos/detail/:id' component={ProyectosRegion}/>

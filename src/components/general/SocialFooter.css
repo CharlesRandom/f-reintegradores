@@ -1,0 +1,29 @@
+/* Social Media Footer */
+.social-footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pleca {
+  height: 5px;
+  width: 100%;
+}
+
+.social-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px 30px;
+}
+
+.social-footer-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-footer-icons img {
+  height: 30px;
+  margin-left: 5px;
+  cursor: pointer;
+}
