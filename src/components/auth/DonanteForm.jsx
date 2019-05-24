@@ -11,18 +11,19 @@ const FormItem = Form.Item;
 const DonanteForm= () => {
   // Using hooks to handle input changes
   const [name, setName] = useState("");
+  const [lastname, setLastname] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   function signup(e) {
     e.preventDefault()
-    console.log(name,phone,email,password)
+    console.log(name,lastname,phone,email,password)
   }
 
   return (
     <div className="donante">
-      <img src={logo} className="logo" alt="Reintegradores logo"/>
+      <Link to="/"><img src={logo} className="logo" alt="Reintegradores logo"/></Link>
       <div className="donante-container">
         <h2>Con tu donación puedes hacer que las cosas sucedan</h2>
         <div className="donante-form-container">
@@ -38,7 +39,7 @@ const DonanteForm= () => {
                 placeholder="Nombre" />
             </FormItem>
             <FormItem>
-              <Input name="lastname" onChange={e=>setName(e.target.value)} 
+              <Input name="lastname" onChange={e=>setLastname(e.target.value)} 
                 prefix={<Icon type="user" 
                 style={{ color: 'rgba(0,0,0,.25)' }} />} 
                 placeholder="Apellido" />

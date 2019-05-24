@@ -1,0 +1,115 @@
+/* Organización */
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-image: url('../../images/login/login.png');
+  background-position-y: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.login a {
+  text-align: left;
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px;
+}
+
+.login-container h2 {
+  text-align: left;
+  width: 600px;
+  margin: 20px 0;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.login-form-container p {
+  color: black;
+  font-family: 'Brandon';
+  font-size: 20px;
+}
+
+.login-container a {
+  color: #4692c0;
+}
+
+.login-form-container {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.login-form-container div {
+  margin: 0;
+}
+
+.login-form-title {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.login-form-title h3 {
+  color: white;
+  font-family: 'Brandon';
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.login-form-container form {
+  width: 350px;
+  margin: 40px 20px;
+  text-align: center;
+}
+
+.login-form-container input {
+  width: 350px;
+  height: 60px;
+  font-family: 'Brandon';
+}
+
+.login-form-container button{
+  width: 350px;
+  height: 60px;
+  margin-top: 40px;
+  background-color: black;
+  border-color: black;
+  font-family: 'Brandon';
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.login-form-container button:hover {
+  background-color: black;
+}
+
+.login-form-container button:focus {
+  background-color: black;
+}
+
+.form-names {
+  display: flex;
+}
+
+.form-names input {
+  width: 175px;
+  height: 60px;
+  font-family: 'Brandon';
+}
+
+.logo {
+  margin-left: 70px;
+  width: 250px;
+}

@@ -109,7 +109,8 @@ const SignupOrg = ({signup, handleText, onChange, onDateChange}) => {
           </FormItem>
           <h3>¿Cuántos?</h3>
           <FormItem>
-            <InputNumber min={1} max={100} defaultValue={3} onChange={(value)=>onDateChange(value,"numFormerProyects")} />
+            <InputNumber min={1} max={100} defaultValue={3} 
+            onChange={(value)=>onDateChange(value,"numFormerProyects")} />
           </FormItem>
           <FormItem>
             <Upload onChange={(info)=>onChange(info,"complianceformerProyects")}>
@@ -125,7 +126,8 @@ const SignupOrg = ({signup, handleText, onChange, onDateChange}) => {
           </FormItem>
         </div>
         <FormItem>
-          <TextArea name="comment" onChange={handleText} style={{width:"60%"}} rows={2} placeholder="Observaciones"/>
+          <TextArea name="comment" onChange={handleText} style={{width:"60%"}} 
+          rows={2} placeholder="Observaciones"/>
         </FormItem>
         <FormItem>
           <div className="d-flex jcc aic">
