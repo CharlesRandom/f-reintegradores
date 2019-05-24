@@ -1,0 +1,108 @@
+/* Organización */
+.organization {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-image: url('../../images/signup/signup_org.png');
+  background-position-y: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.organization-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px;
+}
+
+.organization-container h2 {
+  width: 600px;
+  margin: 20px 0;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.organization-container p {
+  font-family: 'Brandon';
+  font-size: 20px;
+}
+
+.organization-container a {
+  color: #4692c0;
+}
+
+.organization-form-container {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.organization-form-container div {
+  margin: 0;
+}
+
+.org-form-title {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: #4692c0;
+}
+
+.org-form-title h3 {
+  color: white;
+  font-family: 'Brandon';
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.organization-form-container form {
+  width: 350px;
+  margin: 20px;
+  text-align: center;
+}
+
+.organization-form-container input {
+  width: 350px;
+  height: 60px;
+  font-family: 'Brandon';
+}
+
+.organization-form-container button{
+  width: 350px;
+  height: 60px;
+  margin-top: 20px;
+  background-color: #4692c0;
+  border-color: #4692c0;
+  font-family: 'Brandon';
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.organization-form-container button:hover {
+  background-color: #4692c0;
+}
+
+.organization-form-container button:focus {
+  background-color: #4692c0;
+}
+
+.form-names {
+  display: flex;
+}
+
+.form-names input {
+  width: 175px;
+  height: 60px;
+  font-family: 'Brandon';
+}
+
+.logo {
+  margin-left: 70px;
+  width: 250px;
+}
