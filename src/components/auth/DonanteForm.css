@@ -27,6 +27,7 @@
 }
 
 .donante-container h2 {
+  text-align: left;
   width: 600px;
   margin: 4rem 0;
   font-size: 36px;

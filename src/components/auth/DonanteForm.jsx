@@ -20,6 +20,7 @@ const { Option } = Select;
 
 const DonanteForm= (props) => {
 
+<<<<<<< HEAD
   const [donationType, setDonationType] = useState(localStorage.getItem('donationType'))
   const [data, setData] = useState(null)
   const images = [
@@ -28,6 +29,15 @@ const DonanteForm= (props) => {
     'https://res.cloudinary.com/gerard0jr/image/upload/v1559277215/Neobase/Reintegradores/register/Registros_Tuformacionayuda.png',
     'https://res.cloudinary.com/gerard0jr/image/upload/v1559277214/Neobase/Reintegradores/register/Registros_Proyecto_Angel.png'
   ]
+=======
+const DonanteForm= () => {
+  // Using hooks to handle input changes
+  const [name, setName] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+>>>>>>> 9033910a5977f224b976acf02b5e1693dd01356a
 
   const info = () => {
     Modal.info({
@@ -64,7 +74,7 @@ const DonanteForm= (props) => {
 
   return (
     <div className="donante">
-      <img src={logo} className="logo" alt="Reintegradores logo"/>
+      <Link to="/"><img src={logo} className="logo" alt="Reintegradores logo"/></Link>
       <div className="donante-container">
         <h2>{(donationType === 'donate') ? 'Con tu donación puedes hacer que las cosas sucedan'
             : (donationType === 'org') ? 'Somos el contacto directo con organizaciones sin fines de lucro.'
