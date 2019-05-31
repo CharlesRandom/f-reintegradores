@@ -5,7 +5,7 @@
   justify-content: space-between;
   height: 100vh;
   background-image: url('../../images/login/login.png');
-  background-position-y: 250px;
+  background-position-y: 200px;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -14,10 +14,15 @@
   text-align: left;
 }
 
+.logo-login{
+  width: 250px;
+  margin: 2rem 0 0 2rem;
+}
+
 .login-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 100px;
+  margin: 0 3rem;
 }
 
 .login-container h2 {
@@ -107,9 +112,4 @@
   width: 175px;
   height: 60px;
   font-family: 'Brandon';
-}
-
-.logo {
-  margin-left: 70px;
-  width: 250px;
 }
