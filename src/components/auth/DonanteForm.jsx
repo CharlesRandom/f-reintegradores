@@ -1,73 +1,111 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Form, Icon, Input, Button } from 'antd';
-// import useInput from '../../hooks/useInput'
+import { Form, Select, Button, Modal } from 'antd';
+import { signup } from '../../services/auth'
+
 import './DonanteForm.css'
+
+
 import logo from '../../images/logo/Logo_reintegradores_horizontal.png'
+
 import SocialFooter from '../general/SocialFooter';
+import Donation from './forms/Donation';
+import Organization from './forms/Organization';
+import Formation from './forms/Formation';
+import Angel from './forms/Angel';
+
 const FormItem = Form.Item;
+const { Option } = Select;
 
 
-const DonanteForm= () => {
-  // Using hooks to handle input changes
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const DonanteForm= (props) => {
 
-  function signup(e) {
+  const [donationType, setDonationType] = useState(localStorage.getItem('donationType'))
+  const [data, setData] = useState(null)
+  const images = [
+    'https://res.cloudinary.com/gerard0jr/image/upload/v1559277215/Neobase/Reintegradores/register/Registros_fotos_Mesa_de_trabajo_1.png',
+    'https://res.cloudinary.com/gerard0jr/image/upload/v1559277212/Neobase/Reintegradores/register/Registros_fotos_Mesa_de_trabajo_1_copia.png',
+    'https://res.cloudinary.com/gerard0jr/image/upload/v1559277215/Neobase/Reintegradores/register/Registros_Tuformacionayuda.png',
+    'https://res.cloudinary.com/gerard0jr/image/upload/v1559277214/Neobase/Reintegradores/register/Registros_Proyecto_Angel.png'
+  ]
+
+  const info = () => {
+    Modal.info({
+      title: 'Tu registro ha sido correcto',
+      content: (
+        <div>
+          <p>Te enviamos un email de confirmación, por favor revisa tu buzón de entrada</p>
+        </div>
+      ),
+      okText: 'Entendido',
+      onOk() {
+        props.history.push('/login')
+      },
+    });
+  }
+
+  const handleDonationType = type => {
+    localStorage.setItem('donationType', type)
+    setDonationType(localStorage.getItem('donationType'))
+  }
+
+  const postSignup = (e) => {
     e.preventDefault()
-    console.log(name,phone,email,password)
+    setData({...data,'userType':donationType})
+    console.log(data)
+    signup(data)
+    .then(res => {
+      console.log(res)
+      return info()
+    })
+    .catch(e => console.log(e))
+
   }
 
   return (
     <div className="donante">
       <img src={logo} className="logo" alt="Reintegradores logo"/>
       <div className="donante-container">
-        <h2>Con tu donación puedes hacer que las cosas sucedan</h2>
-        <div className="donante-form-container">
-          <div className="form-title">
-            <h3>Regístrate ahora</h3>
-          </div>
-          <Form layout="vertical" method="POST" onSubmit={signup}>
-            <div className="form-names">
-            <FormItem>
-              <Input name="username" onChange={e=>setName(e.target.value)} 
-                prefix={<Icon type="user" 
-                style={{ color: 'rgba(0,0,0,.25)' }} />} 
-                placeholder="Nombre" />
-            </FormItem>
-            <FormItem>
-              <Input name="lastname" onChange={e=>setName(e.target.value)} 
-                prefix={<Icon type="user" 
-                style={{ color: 'rgba(0,0,0,.25)' }} />} 
-                placeholder="Apellido" />
-            </FormItem>
-            </div>
-            <FormItem>
-              <Input name="phone" onChange={e=>setPhone(e.target.value)} 
-                prefix={<Icon type="phone" 
-                style={{ color: 'rgba(0,0,0,.25)' }} />} 
-                placeholder="Teléfono" />
-            </FormItem>
-            <FormItem>
-              <Input name="email" onChange={e=>setEmail(e.target.value)} 
-                prefix={<Icon type="mail" 
-                style={{ color: 'rgba(0,0,0,.25)' }} />} 
-                placeholder="Correo electrónico" />
-            </FormItem>
-            <FormItem>
-              <Input name="password" onChange={e=>setPassword(e.target.value)} 
-                prefix={<Icon type="lock" 
-                style={{ color: 'rgba(0,0,0,.25)' }} />} 
-                type="password" placeholder="Contraseña" />
-            </FormItem>
-            <FormItem>
-              <Button type="primary" htmlType="submit">Siguiente</Button>
-            </FormItem>
-          </Form>
-          <p>¿Ya tienes cuenta? <Link to="/login">Iniciar Sesión</Link></p>
+        <h2>{(donationType === 'donate') ? 'Con tu donación puedes hacer que las cosas sucedan'
+            : (donationType === 'org') ? 'Somos el contacto directo con organizaciones sin fines de lucro.'
+            : (donationType === 'formation') ? 'Donar tu conocimientos y tu tiempo también es otra forma de ayudar.'
+            : (donationType === 'angel') ? 'Tus ideas son valiosas y juntos podemos hacerlas realidad.' : 'Bienvenido a Reintegradores'}</h2>
+        <img src={(donationType === 'donate') ? images[0]
+                  : (donationType === 'org') ? images[1]
+                  : (donationType === 'formation') ? images[2]
+                  : images[3]} alt="imagenes"/>
+      </div>
+      <div className="donante-form-container">
+        <div className={(donationType === 'donate') ? 'green form-title'
+                        : (donationType === 'org') ? 'blue form-title'
+                        : (donationType === 'formation') ? 'orange form-title'
+                        : (donationType === 'angel') ? 'purple form-title' : 'green'}>
+          <h3>Regístrate ahora</h3>
         </div>
+        <Form layout="vertical" method="POST" onSubmit={postSignup}>
+          <small>Selecciona tu área de interés:</small>
+          <FormItem>
+            <Select defaultValue={donationType ? donationType : 'donate'} style={{ textAlign:"center" }} onChange={handleDonationType}>
+              <Option value="donate">Donación</Option> 
+              <Option value="org">Organización</Option>
+              <Option value="formation">Tu formación ayuda</Option>
+              <Option value="angel">Proyecto ángel</Option>
+            </Select>
+          </FormItem>
+          {(donationType === 'donate') ? <Donation setData={setData} data={data}/> 
+          : (donationType === 'org') ? <Organization setData={setData} data={data}/>
+          : (donationType === 'formation') ? <Formation setData={setData} data={data}/>
+          : <Angel setData={setData} data={data}/>
+          }
+          <FormItem>
+            <Button className={(donationType === 'donate') ? 'green'
+                        : (donationType === 'org') ? 'blue'
+                        : (donationType === 'formation') ? 'orange'
+                        : (donationType === 'angel') ? 'purple' : 'green'} 
+                        type="primary" htmlType="submit">Siguiente</Button>
+          </FormItem>
+        </Form>
+        <p>¿Ya tienes cuenta? <Link to="/login">Iniciar Sesión</Link></p>
       </div>
       <SocialFooter />
     </div>

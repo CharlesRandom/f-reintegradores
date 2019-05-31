@@ -80,7 +80,7 @@
   color: white;
 }
 
-.files-container input, button {
+.files-container input, .files-container button {
   width: 400px;
   margin: 0 10px;
 }
@@ -97,7 +97,7 @@
   color: white;
 }
 
-.user-container input, button {
+.user-container input, .user-container button {
   width: 400px;
 }
 

@@ -30,7 +30,7 @@ class Navbar extends Component {
             <Link to='/'><span>Proyectos</span></Link>
             <Link to='/'><span>Beneficios</span></Link>
             <Link to='/'><span>Contacto</span></Link>
-            <Link to='/'><span>Login</span></Link>
+            {this.props.logged ? <Link to='/'><span>Logout</span></Link> : <Link to='/'><span>Login</span></Link>}
             <div className="btn-donar">
             <Link to='/donar'><span>Donar</span></Link>
             </div>

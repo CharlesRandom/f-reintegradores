@@ -63,8 +63,8 @@
 }
 
 .nav span:hover {
-  font-weight: bold;
-  color: black;
+  /* font-weight: bold; */
+  color: #E88246;
 }
 
 .btn-donar span:hover {
@@ -75,7 +75,7 @@
 .nav a {
   text-decoration: none;
   color: black;
-  margin: 0 20px;
+  /* margin: 0 20px; */
   font-size: 1.5em;
 }
 

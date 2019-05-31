@@ -1,26 +1,38 @@
 /* Donante */
 .donante {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  background-image: url('../../images/signup/signup_donante.png');
-  background-position-y: 250px;
+  height: 100vh; */
+  /* background-image: url('../../images/signup/signup_donante.png'); */
+  /* background-position-y: 250px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain; */
+  position: relative;
+  margin-top: 2rem;
 }
 .donante-container {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   margin: 0 100px;
+  position: absolute;
+  top: 0;
+  right: 0; */
+  position: relative;
+}
+
+.donante-container img{
+  width: 100%;
+  /* min-height: 500px; */
 }
 
 .donante-container h2 {
   width: 600px;
-  margin: 20px 0;
+  margin: 4rem 0;
   font-size: 36px;
   font-weight: bold;
   line-height: 2rem;
+  padding: 0 0 0 5rem;
 }
 
 .donante-container p {
@@ -38,6 +50,9 @@
   flex-direction: column;
   align-items: center;
   background-color: #f5f5f5;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
 }
 
 .donante-form-container div {
@@ -105,4 +120,47 @@
 .logo {
   margin-left: 70px;
   width: 250px;
+}
+
+.ant-select-selection-selected-value {
+  float: none !important;
+}
+
+.upload-files{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-files p{
+  font-size: 1rem;
+  margin: 0;
+}
+
+.upload-files button, .upload-files button:active, .upload-files button:focus{
+  background-color: gray;
+  color: white;
+  margin: 0;
+  height: 40px;
+  width: 80%;
+}
+
+.upload-files button:hover{
+  background-color: lightgray;
+}
+
+.green{
+  background-color: #90B249 !important;
+}
+
+.blue{
+  background-color: #4A92BD !important;
+}
+
+.orange{
+  background-color: #E88246 !important;
+}
+
+.purple{
+  background-color: #BC3269 !important;
 }

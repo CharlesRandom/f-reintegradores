@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Presentation.css'
 import playIcon from '../../images/presentation/Iconos_video-01.png'
 
-const Presentation = () => {
+const Presentation = ({changeDonationType}) => {
   return (
     <div className="presentation">
       <div className="presentation-data">
@@ -26,11 +26,17 @@ const Presentation = () => {
         </div>
         <h4>¡Súmate! Te estamos esperando:</h4>
         <div className="btn-container">
-          <div className="btn-presentation">
-            <Link to="/"><span>DONACIÓN</span></Link>
+          <div onClick={() => changeDonationType('donate')} className="btn-presentation green">
+            <Link to="/donar"><span>Donación</span></Link>
           </div>
-          <div className="btn-presentation">
-            <Link to="/"><span>ORGANIZACIÓN</span></Link>
+          <div onClick={() => changeDonationType('org')} className="btn-presentation blue">
+            <Link to="/donar"><span>Organización</span></Link>
+          </div>
+          <div onClick={() => changeDonationType('formation')} className="btn-presentation orange">
+            <Link to="/donar"><span>Tu Formación Ayuda</span></Link>
+          </div>
+          <div onClick={() => changeDonationType('angel')} className="btn-presentation purple">
+            <Link to="/donar"><span>Proyecto Ángel</span></Link>
           </div>
         </div>
       </div>

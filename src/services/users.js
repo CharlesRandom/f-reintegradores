@@ -2,7 +2,7 @@
 import firebase from './firebase'
 
 // const host = 'http://localhost:3000/users'
-// const host = 'https://reintegradoresdev.herokuapp.com/users'
+const host = 'https://reintegradoresdev.herokuapp.com/users'
 
 //upload Constancia Situación Fiscal, Acta Constitutiva, Curriculum, etc
 export const uploadFile=(file)=>{

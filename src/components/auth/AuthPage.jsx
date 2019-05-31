@@ -146,11 +146,10 @@ class AuthPage extends Component {
             
               {
                 "none": <SignupUser signupUser={signupUser} handleText={handleText}/>,
-                "Donatario": <NewDon signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange} current={user} />,
-                "Organización": <NewOrg signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange}/>,
-                "Visitante": <SignupVisit signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
-                "ProyectoÁngel":<SignupAngel signup={signup} handleText={handleText} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
-                "FormaciónAyuda":<SignupFormacion signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange} onTimeChange={onTimeChange} />
+                "donate": <NewDon signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange} current={user} />,
+                "org": <NewOrg signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange}/>,
+                "angel":<SignupAngel signup={signup} handleText={handleText} onDateChange={onDateChange} onSelectChange={onSelectChange}/>,
+                "formation":<SignupFormacion signup={signup} handleText={handleText} onChange={onChange} onDateChange={onDateChange} onSelectChange={onSelectChange} onTimeChange={onTimeChange} />
               }[userType]
             
             : 
