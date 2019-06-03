@@ -52,10 +52,8 @@ const DonanteForm= (props) => {
   const postSignup = (e) => {
     e.preventDefault()
     setData({...data,'userType':donationType})
-    console.log(data)
     signup(data)
     .then(res => {
-      console.log(res)
       return info()
     })
     .catch(e => console.log(e))

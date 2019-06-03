@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { Form, Icon, Input, Button, message } from 'antd';
 import SocialFooter from '../general/SocialFooter';
 
@@ -19,11 +19,16 @@ const LoginForm= (props) => {
     message.error('Usuario o contraseña incorrectos');
   }
 
+  const success = () => {
+    message.success('Inicio de sesión correcto');
+  }
+
   const loginSubmit = e => {
     e.preventDefault()
     login(user)
     .then(res => {
-      console.log(res)
+      localStorage.setItem('loggedUser', JSON.stringify(res))
+      success()
       props.history.push('/proyectos')
     })
     .catch(err => error())
@@ -64,4 +69,4 @@ const LoginForm= (props) => {
   )
 }
 
-export default LoginForm
+export default withRouter(LoginForm)

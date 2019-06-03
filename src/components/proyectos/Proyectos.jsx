@@ -13,19 +13,21 @@ const Option = Select.Option;
 class Proyectos extends Component {
 
   state = {
-    user:{}
+    user:{},
+    logged: false
   }
 
   componentWillMount(){
     const user = JSON.parse(localStorage.getItem('loggedUser'))
-    if(!user || !user.name) this.props.history.push('/login')
-    else this.setState({user})
+    if(!user || !user.username) this.props.history.push('/login')
+    else this.setState({user, logged: true})
   }
   
   render() {
+    const {logged} = this.state
     return (
       <div>
-        <Navbar />
+        <Navbar logged={logged}/>
         <div className="proyectos">
           <img className="isotipo" src={isotipo} alt="Reintegradores isotipo"/>
           <h1>Proyectos</h1>
