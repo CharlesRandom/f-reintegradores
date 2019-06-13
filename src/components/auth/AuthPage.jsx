@@ -6,7 +6,7 @@ import SignupDon from './SignupDon'
 import NewDon from './NewDon'
 import NewOrg from './NewOrg'
 import SignupUser from './SignupUser';
-import SignupVisit from './SignupVisit';
+// import SignupVisit from './SignupVisit';
 import SignupAngel from './SignupAngel';
 import SignupFormacion from './SignupFormacion';
 import {signup, login, getProfile} from '../../services/auth'
