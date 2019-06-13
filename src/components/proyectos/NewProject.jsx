@@ -13,16 +13,7 @@ import FormItem from 'antd/lib/form/FormItem';
 const newImage = 'https://res.cloudinary.com/gerard0jr/image/upload/v1559932974/Neobase/Reintegradores/register/Registros_fotos_Mesa_de_trabajo_1_copia_5.png'
 const createdImg = 'https://res.cloudinary.com/gerard0jr/image/upload/v1559932974/Neobase/Reintegradores/register/Registros_fotos_Mesa_de_trabajo_1_copia_6.png'
 
-<<<<<<< HEAD
-  componentWillMount(){
-    const user = JSON.parse(localStorage.getItem('loggedUser'))
-    if(!user || !user.name) this.props.history.push('/login')
-    else this.setState({user})
-    this.setState({user})
-  }
-=======
 const NewProject = (props) => {
->>>>>>> c8c52723ca62bc9c85553c0effbe30290b5e60e4
 
   const [data, setData] = useState(null)
   const [created, setCreated] = useState(false)
