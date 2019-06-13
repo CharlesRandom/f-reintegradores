@@ -17,7 +17,7 @@ const Benefits = () => {
           <li>Con una donación puedes hacer que las cosas sucedan.</li>
           <li>Tiene beneficios fiscales.</li>
         </ul>
-        <h4>¡Un mundo mejor entre todo es posible!</h4>
+        <h4>Con tu donación puedes hacer que las cosas sucedan.</h4>
       </div>
     </div>
   )

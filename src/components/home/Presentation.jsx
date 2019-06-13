@@ -2,29 +2,25 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Presentation.css'
 import playIcon from '../../images/presentation/Iconos_video-01.png'
+import background from '../../images/presentation/bk_presentation.png'
 
 const Presentation = ({changeDonationType}) => {
   return (
     <div className="presentation">
       <div className="presentation-data">
         <h3>
-          Somos la 1ra plataforma global 
-          de transparencia financiera 
-          para Organizaciones Civiles
+          Innovadora plataforma global de transparencia y seguridad financiera en donaciones para organizaciones civiles
         </h3>
         <p>
-          Bienvenido/a a Reintegradores. 
-          Somos la primer plataforma de transparencia financiera 
-          para la donación colectiva. 
-          Trabajamos conectando fundaciones y asociaciones civiles 
-          con personas y/o empresas dispuestas a colaborar con ellas 
-          de forma simple, rápida y transparente.
+          Bienvenido a Reintegradores. Somos la plataforma innovadora de transparencia y seguridad financiera para la donación colectiva. 
+          Trabajamos conectando fundaciones y asociaciones de manera simple, rápida y transparente.
         </p>
         <div className="play-container">
           <img className="play-icon" src={playIcon} alt="Play icon"/>
-          <span>CONÓCENOS UN POCO MÁS</span>
+          <span>Conócenos un poco más</span>
         </div>
-        <h4>¡Súmate! Te estamos esperando:</h4>
+        <h3>¡Súmate! Tu puedes ser parte del cambio:</h3>
+        <h4>Registro para</h4>
         <div className="btn-container">
           <div onClick={() => changeDonationType('donate')} className="btn-presentation green">
             <Link to="/donar"><span>Donación</span></Link>
@@ -39,6 +35,9 @@ const Presentation = ({changeDonationType}) => {
             <Link to="/donar"><span>Proyecto Ángel</span></Link>
           </div>
         </div>
+      </div>
+      <div className="background">
+        <img src={background} alt="bkgnd"/>
       </div>
     </div>
   )

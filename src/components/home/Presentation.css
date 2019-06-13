@@ -1,36 +1,54 @@
 /* Presentation */
 .presentation {
-  display: flex;
-  height: 650px;
+  /* display: flex; */
+  /* height: 650px;
   background-image: url('../../images/presentation/bk_presentation.png');
   background-color: white;
   background-position: right;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.background{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: -2rem;
+  right: 0;
+  z-index: -100;
+}
+
+.background img{
+  width:100%;
+  height: 100%;
 }
 
 .presentation-data {
   width: 40%;
-  margin: 100px 20px 0 30px;
+  margin: 2rem 20px 0 30px;
 }
 
 .presentation-data h3 {
   width: 87%;
-  font-size: 36px;
-  line-height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold;
 }
 
 .presentation-data h4 {
   width: 92%;
-  font-size: 36px;
+  font-size: 1.2rem;
   line-height: 2.5rem;
 }
 
 .presentation-data p {
   width: 100%;
-  font-size: 22px;
+  font-size: 1rem;
   margin: 40px 0;
   line-height: 1.5rem;
+  text-align: justify;
 }
 
 .play-container {
@@ -62,9 +80,7 @@
   color: #e0e0e0;
   padding: 0.3rem 1rem;
   min-width: 120px;
-  /* width: 200px; */
-  /* height: 40px; */
-  margin: 0px 10px;
+  margin-right: 15px;
 }
 
 .btn-presentation span {
@@ -72,11 +88,6 @@
   cursor: pointer;
   font-size: 1rem;
   transition: all .5s ease;
-}
-
-.btn-presentation span:hover {
-  /* font-weight: bold;
-  color: black; */
 }
 
 .blue{
