@@ -196,3 +196,22 @@
 .project-form .project-docs button {
   max-width: 300px;
 }
+
+.project-created{
+  padding: 2rem;
+  text-align: center;
+}
+
+.project-created h2{
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.project-created p{
+  font-size: 1.5rem;
+}
+
+.create-again{
+  color: lightskyblue;
+  cursor: pointer;
+}

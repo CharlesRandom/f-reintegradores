@@ -1,29 +1,14 @@
 /* Donante */
 .donante {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh; */
-  /* background-image: url('../../images/signup/signup_donante.png'); */
-  /* background-position-y: 250px;
-  background-repeat: no-repeat;
-  background-size: contain; */
   position: relative;
   margin-top: 2rem;
 }
 .donante-container {
-  /* display: flex;
-  justify-content: space-between;
-  margin: 0 100px;
-  position: absolute;
-  top: 0;
-  right: 0; */
   position: relative;
 }
 
 .donante-container img{
   width: 100%;
-  /* min-height: 500px; */
 }
 
 .donante-container h2 {
@@ -56,8 +41,8 @@
   right: 3rem;
 }
 
-.donante-form-container div {
-  margin: 0;
+.ant-form-item{
+  margin-bottom: 0px !important;
 }
 
 .form-title {
@@ -110,6 +95,15 @@
 
 .form-names {
   display: flex;
+  align-items: center;
+}
+
+.form-names-p{
+  width: 60%;
+}
+
+.form-names-div{
+  width: 40%;
 }
 
 .form-names input {

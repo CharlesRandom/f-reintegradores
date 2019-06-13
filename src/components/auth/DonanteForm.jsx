@@ -57,7 +57,6 @@ const DonanteForm= (props) => {
       return info()
     })
     .catch(e => console.log(e))
-
   }
 
   return (
@@ -82,14 +81,12 @@ const DonanteForm= (props) => {
         </div>
         <Form layout="vertical" method="POST" onSubmit={postSignup}>
           <small>Selecciona tu área de interés:</small>
-          <FormItem>
-            <Select defaultValue={donationType ? donationType : 'donate'} style={{ textAlign:"center" }} onChange={handleDonationType}>
-              <Option value="donate">Donación</Option> 
-              <Option value="org">Organización</Option>
-              <Option value="formation">Tu formación ayuda</Option>
-              <Option value="angel">Proyecto ángel</Option>
-            </Select>
-          </FormItem>
+          <Select defaultValue={donationType ? donationType : 'donate'} style={{ textAlign:"center" }} onChange={handleDonationType}>
+            <Option value="donate">Donación</Option> 
+            <Option value="org">Organización</Option>
+            <Option value="formation">Tu formación ayuda</Option>
+            <Option value="angel">Proyecto ángel</Option>
+          </Select>
           {(donationType === 'donate') ? <Donation setData={setData} data={data}/> 
           : (donationType === 'org') ? <Organization setData={setData} data={data}/>
           : (donationType === 'formation') ? <Formation setData={setData} data={data}/>
