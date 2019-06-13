@@ -28,6 +28,7 @@ class NewProject extends Component {
     const user = JSON.parse(localStorage.getItem('loggedUser'))
     if(!user || !user.name) this.props.history.push('/login')
     else this.setState({user})
+    this.setState({user})
   }
 
   addProject = e => {
