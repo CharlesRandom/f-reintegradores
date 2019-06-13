@@ -27,7 +27,7 @@ class Navbar extends Component {
           <Link to='/'><img className="logo" src={logo} alt="Reintegradores logo"/></Link>
           <div>
             <Link to='/'><span>Nosotros</span></Link>
-            <Link to='/'><span>Proyectos</span></Link>
+            <Link to='/proyectos'><span>Proyectos</span></Link>
             <Link to='/'><span>Beneficios</span></Link>
             <Link to='/'><span>Contacto</span></Link>
             {this.props.logged ? <Link to='/'><span>Logout</span></Link> : <Link to='/'><span>Login</span></Link>}
