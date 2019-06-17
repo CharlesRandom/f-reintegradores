@@ -1,0 +1,32 @@
+/* Proyecto Card */
+.proyecto-card {
+  margin: 20px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.proyecto-card h4 {
+  min-width: 280px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.proyecto-card img {
+  width: 280px;
+  height: 200px;
+}
+
+.proyecto-card p {
+  text-align: justify;
+  min-width: 280px;
+}
+
+.proyecto-card a {
+  min-width: 280px;
+  text-decoration: none;
+  text-align: right;
+  color: black;
+}

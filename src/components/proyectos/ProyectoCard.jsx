@@ -1,16 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from 'antd';
+import './ProyectoCard.css'
 
-const ProyectoCard = ( { title, logo, desc } ) => {
+const ProyectoCard = ( { title, img, desc } ) => {
   return (
     <div className="proyecto-card">
-      {/* <img src={logo} alt="Proyecto logo"/> */}
-      <h2>{title}</h2>
+      <img src={img} alt="Proyecto logo"/>
+      <h4>{title}</h4>
       <p>{desc}</p>
-      <Link to='/proyectos/detail'>
-        <Button type="primary" htmlType="submit">Ver más</Button>
-      </Link>
+      <Link to='/proyectos/detail'>Ver más &rarr;</Link>
     </div>
   )
 }

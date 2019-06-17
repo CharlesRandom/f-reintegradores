@@ -12,34 +12,6 @@
   margin-top: 100px;
 }
 
-.proyecto-card {
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin: 30px;
-}
-
-.proyecto-card p {
-  margin: 10px;
-  min-width: 200px;
-  max-width: 200px;
-}
-
-.proyecto-card h2 {
-  min-width: 200px;
-  max-width: 200px;
-}
-
-.proyecto-card button {
-  max-width: 100px;
-}
-
-.proyecto-card img {
-  max-height: 30px;
-}
-
 .proyectos-container {
   width: 800px;
   max-width: 1000px;

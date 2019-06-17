@@ -12,7 +12,8 @@ class Proyectos extends Component {
 
   componentWillMount(){
     const user = JSON.parse(localStorage.getItem('loggedUser'))
-    if(!user || !user.username) this.props.history.push('/login')
+    console.log(user)
+    if(!user || !user.email) this.props.history.push('/login')
     else this.setState({user, logged: true})
   }
   

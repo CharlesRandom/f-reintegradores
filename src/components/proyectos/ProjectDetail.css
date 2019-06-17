@@ -1,0 +1,81 @@
+/* Project Detail */
+.project-top {
+  display: flex;
+}
+
+.project-left {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-left h3 {
+  margin: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.project-left p {
+  margin: 0 20px;
+  text-align: justify;
+}
+
+.project-right {
+  margin: 20px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-right img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.project-data {
+  display: flex;
+  margin: 10px 0;
+  flex-direction: column;
+}
+
+.project-data-label {
+  font-weight: bold;
+}
+
+.project-images {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.project-images img {
+  margin: 20px;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.project-btn-donar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  color: white;
+  background-color: #90b441;
+  width: 300px;
+  height: 50px;
+}
+
+.project-btn-donar span {
+  color: white;
+  margin: 0 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all .5s ease;
+}
+
+.project-btn-donar a {
+  text-decoration: none;
+  color: white;
+  margin: 0 20px;
+  font-size: 1.5em;
+}

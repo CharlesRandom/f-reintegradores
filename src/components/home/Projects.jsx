@@ -43,7 +43,7 @@ const Projects = () => {
         <Link to="/"><img src={obj11} alt="obj button"/></Link>
         <Link to="/"><img src={obj12} alt="obj button"/></Link>
         <Link to="/"><img src={obj13} alt="obj button"/></Link>
-        <Link to="/"><img src={obj14} alt="obj button"/></Link>
+        <Link to="/proyectos/obj/14"><img src={obj14} alt="obj button"/></Link>
         <Link to="/"><img src={obj15} alt="obj button"/></Link>
         <Link to="/"><img src={obj16} alt="obj button"/></Link>
         <Link to="/"><img src={obj17} alt="obj button"/></Link>
