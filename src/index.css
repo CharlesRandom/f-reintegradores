@@ -4,10 +4,6 @@ body {
   font-family: futura-pt, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image:url("./images/bg_color.svg"); */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* background-position: center; */
 }
  
 /* code {
@@ -42,6 +38,14 @@ h1 {
 h2, h3, h4, h5, p {
   font-family: 'Brandon';
 } */
+
+h1 {
+  font-family: sans-serif !important;
+}
+
+h2, h3, h4, h5, p {
+  font-family: sans-serif !important;
+}
 
 .d-flex {
   display: flex;

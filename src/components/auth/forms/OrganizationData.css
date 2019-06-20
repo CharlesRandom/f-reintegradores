@@ -22,7 +22,6 @@
 }
 
 .organization-data-container p {
-  font-family: 'Brandon';
   font-size: 20px;
 }
 
@@ -57,20 +56,17 @@
 
 .form-title h3 {
   color: white;
-  font-family: 'Brandon';
   font-size: 20px;
   font-weight: bold;
 }
 
 .organization-data-form-container h4 {
-  font-family: 'Brandon';
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
 }
 
 .organization-data-form-container h5 {
-  font-family: 'Brandon';
   font-size: 20px;
   margin: -20px 0 0 0;
 }
@@ -81,25 +77,6 @@
   text-align: center;
 }
 
-/* .organization-data-form-container button{
-  width: 350px;
-  height: 60px;
-  margin-top: 20px;
-  background-color: #90b441;
-  border-color: #90b441;
-  font-family: 'Brandon';
-  font-size: 20px;
-  font-weight: bold;
-} */
-
-/* .organization-data-form-container button:hover {
-  background-color: #90b441;
-} */
-
-/* .organization-data-form-container button:focus {
-  background-color: #90b441;
-} */
-
 .form-names {
   display: flex;
 }
@@ -107,7 +84,6 @@
 .form-names input {
   width: 175px;
   height: 60px;
-  font-family: 'Brandon';
 }
 
 .logo {
@@ -132,17 +108,18 @@
   font-size: 1rem;
 }
 
-/* .upload-files button, .upload-files button:active, .upload-files button:focus{
-  background-color: gray;
-  color: white;
-  margin: 0;
-  height: 40px;
-  width: 200px;
-} */
+.confirmation-msg-title {
+  font-size: 3rem !important;
+  font-weight: bold;
+  padding: 2rem;
+  text-align: center;
+}
 
-/* .upload-files button:hover{
-  background-color: lightgray;
-} */
+.confirmation-msg-text {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
 
 .green{
   background-color: #90B249 !important;

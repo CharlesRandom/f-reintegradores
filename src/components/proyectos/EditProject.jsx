@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Input, Select, Tooltip, Icon, Upload, Button } from 'antd';
+import { Form, Input, Select, Icon, Upload, Button } from 'antd';
 import { uploadFile } from '../../services/users'
 import { addOrgData } from '../../services/organizations'
 import './EditProject.css'
@@ -134,7 +134,7 @@ const EditProject = () => {
           </div>
         </div>
         <div className="upload-files">
-          <p>Copia de Acta Constitutiva</p>
+          <p>Contenido multimedia</p>
           <Upload onChange={(info)=>onChange(info,"media")}
             customRequest={dummyRequest}>
             <Button>
